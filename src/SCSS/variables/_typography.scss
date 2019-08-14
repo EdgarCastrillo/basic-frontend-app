@@ -24,30 +24,31 @@ $text: SFProDisplayLight;
 
 
 body {
-  color: #111;
   font-family: $text; 
+  color: #111;
   font-size: 1rem;
   line-height: 147%;
 }
 
 h1 {
-  font-size: 8rem;
   font-family: $logo;
+  font-size: 8rem;
 }
 
 h2 {
-  font-size: 2.125rem;
   font-family: $title;
+  font-size: 2.125rem;
+  line-height: 2.2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
   font-family: $subTitle;
+  font-size: 1.25rem;
   margin: 0;
 }
 
 p {
+  font-family: $text;
   margin: 0;
   font-size: 1rem;
-  font-family: $text;
 }

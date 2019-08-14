@@ -16,28 +16,29 @@
   src: url("../../fonts/SF-Pro-Display-Semibold.otf") format("opentype"); }
 
 body {
-  color: #111;
   font-family: SFProDisplayLight;
+  color: #111;
   font-size: 1rem;
   line-height: 147%; }
 
 h1 {
-  font-size: 8rem;
-  font-family: SFProCompactBold; }
+  font-family: SFProCompactBold;
+  font-size: 8rem; }
 
 h2 {
+  font-family: SFProDisplayBold;
   font-size: 2.125rem;
-  font-family: SFProDisplayBold; }
+  line-height: 2.2rem; }
 
 h3 {
-  font-size: 1.25rem;
   font-family: SFProDisplaySemiBold;
+  font-size: 1.25rem;
   margin: 0; }
 
 p {
+  font-family: SFProDisplayLight;
   margin: 0;
-  font-size: 1rem;
-  font-family: SFProDisplayLight; }
+  font-size: 1rem; }
 
 .login {
   width: 100%; }
@@ -60,12 +61,12 @@ p {
   box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; }
   .btn-white h3 {
-    background: linear-gradient(-180deg, #FFB764, #FF528E);
+    background: linear-gradient(-185deg, #FFB764, #FF528E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
 .btn-gradient {
-  background-image: linear-gradient(-180deg, #FFB764, #FF528E);
+  background-image: linear-gradient(-185deg, #FFB764, #FF528E);
   color: #ffffff;
   width: 304px;
   height: 45px;
@@ -105,7 +106,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-180deg, #FFB764, #FF528E); }
+  background-image: linear-gradient(-185deg, #FFB764, #FF528E); }
   .splash h1 {
     color: #ffffff; }
 
@@ -115,7 +116,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-180deg, #FFB764, #FF528E); }
+  background-image: linear-gradient(-185deg, #FFB764, #FF528E); }
   .login h1 {
     color: #ffffff; }
   .login form {
@@ -135,3 +136,33 @@ body {
       background: rgba(247, 156, 156, 0);
       border-bottom: 1px solid #ffffff;
       color: #ffffff; }
+
+.container-secundary {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; }
+  .container-secundary .previous {
+    height: 10%; }
+  .container-secundary .information {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; }
+    .container-secundary .information h2 {
+      text-align: center; }
+    .container-secundary .information p {
+      text-align: center; }
+
+.container .container {
+  width: 200%;
+  display: flex; }
+
+.container .container.opened {
+  transform: translateX(-50%); }
+
+.form-sign-up {
+  width: 50%;
+  padding: 10px; }

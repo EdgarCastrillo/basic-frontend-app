@@ -1,0 +1,11 @@
+.container .container{
+  width: 200%;
+  display: flex;
+}
+.container .container.opened{
+  transform: translateX(-50%);
+}
+.form-sign-up{
+  width: 50%;
+  padding: 10px;
+}

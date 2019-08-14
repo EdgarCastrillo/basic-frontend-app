@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import withAuth from '../components/withAuth.js';
 import Button from '../components/Button'
+import FormCreatePersonalAccount from '../components/FormCreatePersonalAccount.js';
 
 class Signup extends Component {
 
   state = {
     username: '',
     password: '',
+    form: 0
   };
 
   handleFormSubmit = (event) => {
@@ -31,27 +33,55 @@ class Signup extends Component {
     this.setState({[name]: value});
   }
 
+  handlePersonal = () => {
+    this.setState({
+      form: 1
+    })
+  }
+  handleTrainer = () => {
+    this.setState({
+      form: 2
+    })
+  }
+  handleCloseForm= ()=>{
+    this.setState({
+      form: 0
+    })
+  }
   render() {
     const { username, password } = this.state;
+    const classContainer = this.state.form === 1 || this.state.form === 2 ? 'opened' : '';
     return (
       <>
-      <section>
-      <span><p>Previous</p></span>
-        <h2>Are you looking for a personal trainer?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit. Duis eget nibh sed sem tempus 
-        pharetra non nec odio.</p>
-        <Button route='/signup' color='btn-gradient' title='next'/>
-        <h2>Are you a personal trainer?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit. Duis eget nibh sed sem tempus 
-        pharetra non nec odio. </p>
-        <Button route='/signup' color='btn-gradient' title='next'/>
+      <section className={`container ${classContainer}`}>
 
-        <p>Already have account? 
-          <Link to={'/login'}> Login</Link>
-        </p>
+        <section className='container-secundary'>
+          <div className='previous'>
+            <button onClick={this.props.history.goBack}>
+            <p>Previous</p>
+            </button>
+          </div>
+          <div className='information'>
+            <h2>Are you looking for a personal trainer?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Duis eget nibh sed sem tempus 
+            pharetra non nec odio.</p>
+            <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handlePersonal}/>
+          </div>
+          <div className='information'>
+            <h2>Are you a personal trainer?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Duis eget nibh sed sem tempus 
+            pharetra non nec odio. </p>
+            <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handleTrainer}/>
+          </div>
+        </section>
+        <section className="form-sign-up">
+        <div onClick={this.handleCloseForm}>back</div>
+       <FormCreatePersonalAccount form={this.state.form}/> 
+        </section>
       </section>
+      
       </>
     )
   }
