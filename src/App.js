@@ -5,14 +5,15 @@ import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import AnonRoute from './components/AnonRoute.js';
 
-import Private from './pages/Private';
+import Private from './pages/Explore';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Splash from './pages/Splash';
+import Instructions from './pages/Instructions';
 
 import AuthProvider from './contexts/auth-context.js';
 
-import './App.css';
-import 'milligram';
+import '../src/SCSS/css/main.css';
 
 class App extends Component {
   render() {
@@ -20,12 +21,12 @@ class App extends Component {
       <Router>
         <AuthProvider>
           <div className="container">
-            <h1>Basic React Authentication</h1>
-            <Navbar />
             <Switch>
+              <AnonRoute path='/' exact component={Splash} />
               <AnonRoute path="/signup" component={Signup} />
               <AnonRoute path="/login" component={Login} />
               <PrivateRoute path="/private" component={Private} />
+              <AnonRoute path="/instructions" exact component={Instructions} />
             </Switch>
           </div>
         </AuthProvider>

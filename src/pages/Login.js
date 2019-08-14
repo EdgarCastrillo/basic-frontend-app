@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import withAuth from '../components/withAuth';
+import Button from '../components/Button';
 
 class Login extends Component {
   state = {
@@ -28,17 +28,17 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <>
+      <section className='login'>
+        <h1>Fit</h1>
         <form onSubmit={this.handleFormSubmit}>
-          <label htmlFor='username' >Username:</label>
-          <input id='username' type='text' name='username' value={username} onChange={this.handleChange}/>
-          <label htmlFor='password'>Password:</label>
-          <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
-          <input type='submit' value='Login' />
+          {/* <label htmlFor='username' >Username:</label> */}
+          <input id='username' type='text' name='username' placeholder='username' value={username} onChange={this.handleChange}/>
+          {/* <label htmlFor='password'>Password:</label> */}
+          <input id='password' type='password' name='password' placeholder='password' value={password} onChange={this.handleChange} />
+          <Button route='#' type='submit' value='Login' color='btn-white' title='Login' handler={this.handleFormSubmit}/>
         </form>
-
-        <p>You don't have an accout yet?
-            <Link to={'/signup'}> Signup</Link>
-        </p>
+        <Button route='/instructions' color='btn-white' title='Create new account'/>
+      </section>
       </>
     )
   }

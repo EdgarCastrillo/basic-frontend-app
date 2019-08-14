@@ -1,0 +1,32 @@
+.login {
+  h1 {
+    color: $secundary-color;
+  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: $primary-gradient;
+
+  form {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 35px 0px 35px;
+
+    input {
+      width: 304px;
+      height: 45px;
+      border-style: none;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration:none;
+      margin-bottom: 20px;
+      background: rgba(247, 156, 156, 0);
+      border-bottom: 1px solid $secundary-color;
+      color: $secundary-color;
+    }
+  }
+}

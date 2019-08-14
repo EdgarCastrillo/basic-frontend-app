@@ -1,0 +1,53 @@
+/* ---- typography ---- */
+
+@font-face {
+  font-family: SFProCompactBold;
+  src: url("../../fonts/SF-Compact-Rounded-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProDisplayBold;
+  src: url("../../fonts/SF-Pro-Display-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProDisplayLight;
+  src: url("../../fonts/SF-Pro-Display-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: SFProDisplaySemiBold;
+  src: url("../../fonts/SF-Pro-Display-Semibold.otf") format("opentype");
+}
+
+$logo: SFProCompactBold;
+$title: SFProDisplayBold;
+$subTitle: SFProDisplaySemiBold;
+$text: SFProDisplayLight;
+
+
+body {
+  color: #111;
+  font-family: $text; 
+  font-size: 1rem;
+  line-height: 147%;
+}
+
+h1 {
+  font-size: 8rem;
+  font-family: $logo;
+}
+
+h2 {
+  font-size: 2.125rem;
+  font-family: $title;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-family: $subTitle;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: $text;
+}
