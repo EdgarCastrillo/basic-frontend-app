@@ -2,9 +2,14 @@
 @import '../SCSS/variables/typography';
 @import '../SCSS/components/forms';
 @import '../SCSS/components/btn';
-@import '../SCSS/components/container';
 @import '../SCSS/components/reset';
 @import '../SCSS/components/splash';
 @import '../SCSS/components/login';
 @import '../SCSS/components/information';
 @import '../SCSS/components/signup';
+
+
+.main{
+  width: 100vw;
+  height: 100vh;
+}

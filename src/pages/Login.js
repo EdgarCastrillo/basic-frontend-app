@@ -29,15 +29,19 @@ class Login extends Component {
     return (
       <>
       <section className='login'>
-        <h1>Fit</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          {/* <label htmlFor='username' >Username:</label> */}
-          <input id='username' type='text' name='username' placeholder='username' value={username} onChange={this.handleChange}/>
-          {/* <label htmlFor='password'>Password:</label> */}
-          <input id='password' type='password' name='password' placeholder='password' value={password} onChange={this.handleChange} />
-          <Button route='#' type='submit' value='Login' color='btn-white' title='Login' handler={this.handleFormSubmit}/>
-        </form>
-        <Button route='/instructions' color='btn-white' title='Create new account'/>
+        <div className='logo'>
+          <h1>Fit</h1>
+        </div>
+        <div className='form-login'>
+          <form onSubmit={this.handleFormSubmit}>
+            {/* <label htmlFor='username' >Username:</label> */}
+            <input id='username' type='text' name='username' placeholder='username' value={username} onChange={this.handleChange}/>
+            {/* <label htmlFor='password'>Password:</label> */}
+            <input id='password' type='password' name='password' placeholder='password' value={password} onChange={this.handleChange} />
+            <Button route='#' type='submit' value='Login' color='btn-white' title='Login' handler={this.handleFormSubmit}/>
+          </form>
+          <Button route='/instructions' color='btn-white' title='Create new account'/>
+        </div>
       </section>
       </>
     )

@@ -11,8 +11,8 @@ function FormCreatePersonalAccount({errors, isSubmitting,...props}) {
       
         <div className="App">
           <Form>
-            pepeeeeee
-            {errors.email && <p>{errors.email}</p>}
+            PRUEBA 1
+            {errors.email && <>{errors.email}</>}
             <Field type='email' name='email' placeholder='Write your email'/>
             {errors.password && <p>{errors.password}</p>}
             <Field type='password' name='password' placeholder='Write your password'/>
@@ -26,7 +26,7 @@ function FormCreatePersonalAccount({errors, isSubmitting,...props}) {
       
         <div className="App">
           <Form>
-            juanitoooo
+            PRUEBA 2
             {errors.email && <p>{errors.email}</p>}
             <Field type='email' name='email' placeholder='Write your email'/>
             {errors.password && <p>{errors.password}</p>}

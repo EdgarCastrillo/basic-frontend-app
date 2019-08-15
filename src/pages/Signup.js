@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import withAuth from '../components/withAuth.js';
 import Button from '../components/Button'
 import FormCreatePersonalAccount from '../components/FormCreatePersonalAccount.js';
@@ -49,13 +48,12 @@ class Signup extends Component {
     })
   }
   render() {
-    const { username, password } = this.state;
     const classContainer = this.state.form === 1 || this.state.form === 2 ? 'opened' : '';
     return (
       <>
       <section className={`container ${classContainer}`}>
 
-        <section className='container-secundary'>
+        <section className='selector-group'>
           <div className='previous'>
             <button onClick={this.props.history.goBack}>
             <p>Previous</p>

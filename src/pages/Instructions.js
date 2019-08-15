@@ -4,7 +4,7 @@ import Button from '../components/Button';
 class Instructions extends Component {
   render() {
     return (
-      <section className='container-secundary'>
+      <section className='container-instructions'>
         <div className='previous'>
           <button onClick={this.props.history.goBack}>
           <p>Previous</p>
