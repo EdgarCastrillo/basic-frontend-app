@@ -74,3 +74,16 @@ export default withFormik({
     },2000)
   }
  })(FormCreatePersonalAccount);
+
+
+//  <div className="App">
+//           <Form>
+//             PRUEBA 1
+//             {errors.email && <>{errors.email}</>}
+//             <Field type='email' name='email' placeholder='Write your email'/>
+//             {errors.password && <p>{errors.password}</p>}
+//             <Field type='password' name='password' placeholder='Write your password'/>
+//             <button disabled={isSubmitting && true} type='submit'> submit </button>
+//           </Form>
+//         </div>
+      

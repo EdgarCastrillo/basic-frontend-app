@@ -125,21 +125,21 @@ User profile & Personal trainers:
 User model
 
 {
-  username - String // required & unique
-  email - String // required & unique
-  firstName - String // required
-  secondName - String // 
-  surname - String // 
-  password - String // required
-  country - String // required
-  city - String // required
-  studies - [] // required
-  description - String // required
-  skills - [] // required
-  whereTrain - [] // required
-  userType - String 
-  dateCreate - String
-  dateUpdate - String
+  - username - String // required & unique
+  - email - String // required & unique
+  - firstName - String // required
+  - secondName - String // 
+  - surname - String // 
+  - password - String // required
+  - country - String // required
+  - city - String // required
+  - studies - [] // required
+  - description - String // required
+  - skills - [] // required
+  - whereTrain - [] // required
+  - userType - String 
+  - dateCreate - String
+  - dateUpdate - String
 }
 
 
