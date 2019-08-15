@@ -4,15 +4,15 @@ import Button from '../components/Button';
 
 class Login extends Component {
   state = {
-    username: '',
+    email: '',
     password: '',
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { username, password } = this.state
+    const { email, password } = this.state
 
-    this.props.login({ username, password })
+    this.props.login({ email, password })
     .then( (user) => {
       console.log(user)
     })
@@ -25,7 +25,7 @@ class Login extends Component {
   }
 
   render() {
-    const { username, password } = this.state;
+    const { email, password } = this.state;
     return (
       <>
       <section className='login'>
@@ -35,7 +35,7 @@ class Login extends Component {
         <div className='form-login'>
           <form onSubmit={this.handleFormSubmit}>
             {/* <label htmlFor='username' >Username:</label> */}
-            <input id='username' type='text' name='username' placeholder='username' value={username} onChange={this.handleChange}/>
+            <input id='email' type='text' name='email' placeholder='email' value={email} onChange={this.handleChange}/>
             {/* <label htmlFor='password'>Password:</label> */}
             <input id='password' type='password' name='password' placeholder='password' value={password} onChange={this.handleChange} />
             <Button route='#' type='submit' value='Login' color='btn-white' title='Login' handler={this.handleFormSubmit}/>

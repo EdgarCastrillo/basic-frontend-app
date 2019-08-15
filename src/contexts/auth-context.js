@@ -13,6 +13,7 @@ class AuthProvider extends Component {
   userSignUp = (user) => {
     return authService.signup(user)
     .then((user) => {
+      console.log('entro en el context')
       this.setState({
         isLoggedIn: true,
         user
@@ -23,6 +24,7 @@ class AuthProvider extends Component {
   userLogin = (user) => {
     return authService.login(user)
     .then((user) => {
+      
       this.setState({
         isLoggedIn: true,
         user

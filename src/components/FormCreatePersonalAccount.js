@@ -1,50 +1,73 @@
-import React from 'react';
+import React , {Component}from 'react';
+import withAuth from '../components/withAuth.js';
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 
+class FormCreatePersonalAccount extends Component{
+  state = {
+    redirect: false,
+  }
 
-function FormCreatePersonalAccount({errors, isSubmitting,...props}) {
-  
- 
-  if(props.form === 1){
-    return(
-      
-        <div className="App">
+  render() {
+    const {errors, isSubmitting,...props} = this.props
+    if(props.form === 1){
+      return(
+        <section className="container-form">
+          <div className='header-form'>
+            <h2>Personal account</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Duis eget nibh sed sem tempus 
+            pharetra non nec odio.</p>
+          </div>
           <Form>
-            PRUEBA 1
-            {errors.email && <>{errors.email}</>}
-            <Field type='email' name='email' placeholder='Write your email'/>
-            {errors.password && <p>{errors.password}</p>}
-            <Field type='password' name='password' placeholder='Write your password'/>
-            <button disabled={isSubmitting && true} type='submit'> submit </button>
+            <section className='image-upload'>
+              <div>
+                <img src='' alt=''/>
+              </div>
+              <div>
+                <h3>Profile picture</h3>
+                <p>add a profile picture</p>
+              </div>
+            </section>
+            <section className='information-form'>
+              <div>
+                <label>Name</label>
+                {errors.email && <>{errors.email}</>}
+                <Field type='email' name='email' placeholder='Write your email'/>
+              </div>
+              <div>
+              <label>Password</label>
+                {errors.password && <p>{errors.password}</p>}
+                <Field type='hidden' value='PersonalAccount'/>
+                <Field type='password' name='password' placeholder='Write your password'/>
+              </div>
+              <button disabled={isSubmitting && true} type='submit'> submit </button>
+            </section>
           </Form>
-        </div>
-      
-    )
-  }else if(props.form === 2){
-    return(
-      
+        </section>
+      )
+    }else if(props.form === 2){
+      return(
         <div className="App">
           <Form>
-            PRUEBA 2
+            <h2>PRUEBA 2</h2>
             {errors.email && <p>{errors.email}</p>}
             <Field type='email' name='email' placeholder='Write your email'/>
             {errors.password && <p>{errors.password}</p>}
             <Field type='password' name='password' placeholder='Write your password'/>
             <button disabled={isSubmitting && true} type='submit'> submit </button>
           </Form>
-        </div>
+        </div> 
+      )
+    }else{
+      return(<>
       
-    )
-  }else{
-    return(<>
-    nada
-    </>)
+      </>)
+    } 
   }
-  
 }
 
-export default withFormik({
+export default withAuth(withFormik({
   mapPropsToValues({email, password}) {
     return ({
       email: email || '',
@@ -59,31 +82,11 @@ export default withFormik({
       .min(8)
       .required()
   }),
-  handleSubmit(values, {setSubmitting, setErrors, resetForm})  {
-    setTimeout(()=>{
-      console.log(values)
-      if(values.email === '1@1.com') {
-        setErrors({
-          email: 'email already taken'
-        })
-      } else {
-        console.log('todo ok')
-        resetForm()
-      }
-      setSubmitting(false);
-    },2000)
+  handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
+    const {email, password} = values 
+    bag.props.signup({email, password})
+    .then((response)=>{
+      return response
+    }).catch(error => error)
   }
- })(FormCreatePersonalAccount);
-
-
-//  <div className="App">
-//           <Form>
-//             PRUEBA 1
-//             {errors.email && <>{errors.email}</>}
-//             <Field type='email' name='email' placeholder='Write your email'/>
-//             {errors.password && <p>{errors.password}</p>}
-//             <Field type='password' name='password' placeholder='Write your password'/>
-//             <button disabled={isSubmitting && true} type='submit'> submit </button>
-//           </Form>
-//         </div>
-      
+ })(FormCreatePersonalAccount));

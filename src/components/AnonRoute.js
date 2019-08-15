@@ -20,3 +20,4 @@ const AnonRoute = (props) => {
 }
 
 export default withAuth(AnonRoute);
+

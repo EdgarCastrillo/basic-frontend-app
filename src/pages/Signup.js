@@ -47,12 +47,12 @@ class Signup extends Component {
       form: 0
     })
   }
+  
   render() {
     const classContainer = this.state.form === 1 || this.state.form === 2 ? 'opened' : '';
     return (
       <>
       <section className={`container ${classContainer}`}>
-
         <section className='selector-group'>
           <div className='previous'>
             <button onClick={this.props.history.goBack}>
@@ -79,19 +79,9 @@ class Signup extends Component {
        <FormCreatePersonalAccount form={this.state.form}/> 
         </section>
       </section>
-      
       </>
     )
   }
 }
 
 export default withAuth(Signup);
-
-
-{/* <form onSubmit={this.handleFormSubmit}>
-  <label htmlFor='username'>Username:</label>
-  <input id='username' type='text' name='username' value={username} onChange={this.handleChange}/>
-  <label htmlFor='password'>Password:</label>
-  <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
-  <input type='submit' value='Signup' />
-</form> */}
