@@ -59,23 +59,25 @@ class Signup extends Component {
             <p>Previous</p>
             </button>
           </div>
-          <div className='information'>
-            <h2>Are you looking for a personal trainer?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit. Duis eget nibh sed sem tempus 
-            pharetra non nec odio.</p>
-            <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handlePersonal}/>
-          </div>
-          <div className='information'>
-            <h2>Are you a personal trainer?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit. Duis eget nibh sed sem tempus 
-            pharetra non nec odio. </p>
-            <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handleTrainer}/>
+          <div className='info-container'>
+            <div className='info'>
+              <h2>Are you looking for a personal trainer?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Duis eget nibh sed sem tempus 
+              pharetra non nec odio.</p>
+              <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handlePersonal}/>
+            </div>
+            <div className='info'>
+              <h2>Are you a personal trainer?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Duis eget nibh sed sem tempus 
+              pharetra non nec odio. </p>
+              <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handleTrainer}/>
+            </div>
           </div>
         </section>
         <section className="form-sign-up">
-        <div onClick={this.handleCloseForm}>back</div>
+        <div onClick={this.handleCloseForm}>Previous</div>
        <FormCreatePersonalAccount form={this.state.form}/> 
         </section>
       </section>

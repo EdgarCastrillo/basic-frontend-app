@@ -28,7 +28,8 @@ h1 {
 h2 {
   font-family: SFProDisplayBold;
   font-size: 2.125rem;
-  line-height: 2.2rem; }
+  line-height: 2.2rem;
+  margin-bottom: 20px; }
 
 h3 {
   font-family: SFProDisplaySemiBold;
@@ -90,6 +91,10 @@ html {
 
 body {
   margin: 0;
+  padding: 0; }
+
+button {
+  margin: 0 auto;
   padding: 0; }
 
 @media (min-width: 768px) {
@@ -156,7 +161,7 @@ body {
   padding: 20px; }
 
 .container-instructions .previous {
-  height: 10%; }
+  margin-bottom: 74px; }
 
 .container-instructions .information {
   height: 100%;
@@ -169,19 +174,33 @@ body {
   text-align: center; }
 
 .container-instructions .information p {
-  text-align: center; }
+  text-align: center;
+  margin: 0 10px 0 10px; }
 
 .main {
   overflow: hidden; }
 
 .main .container {
   width: 200%;
-  height: 100vh;
   display: flex;
   flex-direction: row; }
 
+.main .selector-group .previous {
+  margin-bottom: 74px; }
+
+.main .selector-group .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.main .selector-group .info h2 {
+  text-align: center; }
+
+.main .selector-group .info p {
+  text-align: center;
+  margin: 10px 10px 30px 10px; }
+
 .main .container.opened {
-  padding: 20px;
   transform: translateX(-50%); }
 
 .main .selector-group {
@@ -189,10 +208,53 @@ body {
   padding: 20px; }
 
 .main .form-sign-up {
-  width: 50%;
-  height: 100vh;
+  width: 100vw;
   padding: 20px; }
 
+.form-sign-up .header-form {
+  margin-bottom: 40px; }
+
+.form-sign-up .img-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; }
+
+.form-sign-up .img-container .profile-img {
+  width: 90px;
+  height: 90px;
+  margin-right: 40px;
+  background-color: #dddddd;
+  border-radius: 100%; }
+
+.form-sign-up .info-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px; }
+
+.form-sign-up .info-block label {
+  font-family: SFProDisplaySemiBold;
+  font-size: 1.25rem;
+  margin-bottom: 2px; }
+
+.form-sign-up .info-block input {
+  width: 100%;
+  border: 0;
+  padding: 0px 10px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  margin-top: 12px;
+  border-radius: 20px; }
+
+.form-sign-up .info-block input:focus {
+  outline: none;
+  font-size: 14px;
+  border: 1px solid #474747; }
+
+.form-sign-up .info-block p.form-error {
+  display: flex;
+  justify-content: flex-end;
+  color: #e04646; }
+
 .main {
-  width: 100vw;
-  height: 100vh; }
+  width: 100vw; }

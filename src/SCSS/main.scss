@@ -1,15 +1,16 @@
 @import '../SCSS/variables/colors';
 @import '../SCSS/variables/typography';
-@import '../SCSS/components/forms';
+@import '../SCSS/components/forms-login';
 @import '../SCSS/components/btn';
 @import '../SCSS/components/reset';
 @import '../SCSS/components/splash';
 @import '../SCSS/components/login';
 @import '../SCSS/components/information';
 @import '../SCSS/components/signup';
+@import '../SCSS/components/form';
 
 
 .main{
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 }
