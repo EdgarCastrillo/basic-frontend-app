@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import withAuth from '../components/withAuth.js';
 import Button from '../components/Button'
 import FormCreatePersonalAccount from '../components/FormCreatePersonalAccount.js';
+import FormCreateTrainerAccount from '../components/FormCreateTrainerAccount.js';
 
 class Signup extends Component {
 
@@ -78,7 +79,8 @@ class Signup extends Component {
         </section>
         <section className="form-sign-up">
         <div onClick={this.handleCloseForm}>Previous</div>
-       <FormCreatePersonalAccount form={this.state.form}/> 
+       { this.state.form === 1 ? <FormCreatePersonalAccount /> : null }
+       { this.state.form === 2 ? <FormCreateTrainerAccount /> : null }
         </section>
       </section>
       </>
