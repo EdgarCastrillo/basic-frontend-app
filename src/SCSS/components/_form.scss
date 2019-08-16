@@ -29,13 +29,13 @@
     }
     input {
       width: 100%;
-      border: 0;
       padding: 0px 10px;
       height: 30px;
       font-size: 14px;
       border: 1px solid $detail-color;
       margin-top: 12px;
       border-radius: 20px;
+      font-family: $text;     
     }
     input:focus {
       outline: none;
@@ -46,7 +46,63 @@
       display: flex;
       justify-content: flex-end;
       color: #e04646;
+    }
+
+    select {
+      width: 100%;
+      padding: 0px 10px;
+      height: 30px;
+      font-size: 14px;
+      border: 1px solid $detail-color;
+      margin-top: 12px;
+      border-radius: 20px;
+      background-color: white;
+      font-family: $text;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 4px 10px;
+      height: 100px;
+      font-size: 14px;
+      border: 1px solid $detail-color;
+      margin-top: 12px;
+      border-radius: 8px;
+      background-color: white;
+      font-family: $text;
+    }
+
+    section.skill-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-top:12px;
+
+      img {
+        width: 100px;
+        border-radius: 15px;
+      }
+      input[type=checkbox]:checked + 
+        label {
+          img {
+            opacity: 0.7;
+          }
+        }
+    }
   }
+
+    input#trx {
+      display: none;
   }
-  
+    input#yoga {
+      display: none;
+  }
+    input#musculation {
+      display: none;
+  }
+    input#cardio {
+      display: none;
+  }
+
 }

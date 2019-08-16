@@ -41,7 +41,7 @@ class FormCreatePersonalAccount extends Component{
                 <Field type='password' name='password' placeholder='Write your password'/>
                 {touched.password && errors.password && <p className='form-error'>{errors.password}</p>}
               </div>
-              <button disabled={isSubmitting && true} type='submit' color='btn-gradient'>Create profile</button>
+              <button disabled={isSubmitting && true} type='submit' className='btn-gradient-form'>Create profile</button>
             </section>
           </Form>
         </section>
@@ -125,7 +125,7 @@ class FormCreatePersonalAccount extends Component{
                 <option value="Sevilla" label="Sevilla" />
                 <option value="Valencia" label="Valencia" />
                 </Field>
-                {touched.country && errors.country && <p className="form-error">{errors.country}</p>}
+                {touched.city && errors.city && <p className="form-error">{errors.city}</p>}
               </div>
               <div className='info-block'>
                 <label>Academic degrees</label>
@@ -150,22 +150,58 @@ class FormCreatePersonalAccount extends Component{
               </div>
               <div className='info-block'>
               <label>Skills</label>
-                <Field
-                name="consent"
-                type="checkbox"
-                checked={values.consent}
-                className={"checkbox" + (errors.consent && touched.consent ? " is-invalid" : "")
-                }
-                />
-                <Field
-                name="consent"
-                type="checkbox"
-                checked={values.conse}
-                className={"checkbox" + (errors.consent && touched.consent ? " is-invalid" : "")
-                }
-                />
+                <section className='skill-group'>
+                  <Field
+                  id='trx'
+                  name="trx"
+                  type="checkbox"
+                  checked={values.trx}
+                  className={"checkbox" + (errors.trx && touched.trx ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='trx'><img src="/img/trx.jpg" alt=""/></label>
+                  <Field
+                  id='yoga'
+                  name="yoga"
+                  type="checkbox"
+                  checked={values.yoga}
+                  className={"checkbox" + (errors.yoga && touched.yoga ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='yoga'><img src="/img/trx.jpg" alt=""/></label>
+                  <Field
+                  id='musculation'
+                  name="musculation"
+                  type="checkbox"
+                  checked={values.musculation}
+                  className={"checkbox" + (errors.musculation && touched.musculation ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='musculation'><img src="/img/trx.jpg" alt=""/></label>
+                  <Field
+                  id='cardio'
+                  name="cardio"
+                  type="checkbox"
+                  checked={values.cardio}
+                  className={"checkbox" + (errors.cardio && touched.cardio ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='cardio'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
               </div>
-              <button disabled={isSubmitting && true} type='submit' color='btn-gradient'>Create profile</button>
+              <div className='info-block'>
+                <label>Where do I train?</label>
+                <Field
+                name="trian"
+                component='select'
+                >
+                <option value="" disabled label="Select your gym" />
+                <option value="Metropolitan" label="Metropolitan" />
+                <option value="Dir" label="Dir" />
+                </Field>
+                {touched.train && errors.train && <p className="form-error">{errors.train}</p>}
+              </div>
+              <button disabled={isSubmitting && true} type='submit' className='btn-gradient-form'>Create profile</button>
             </section>
           </Form>
         </section>
@@ -179,7 +215,7 @@ class FormCreatePersonalAccount extends Component{
 }
 
 export default withAuth(withFormik({
-  mapPropsToValues({name, surname, email, password, country, city, academic, description, }) {
+  mapPropsToValues({name, surname, email, password, country, city, academic, description }) {
     return ({
       name: name || '',
       surname: surname || '',
@@ -222,11 +258,22 @@ export default withAuth(withFormik({
       .required('Academic degree is required'),
     description: Yup
       .string()
+      .max(10)
       .required('Description is required'),
   }),
   handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
-    const {name, surname, email, password, country, city, academic, description, } = values 
-    bag.props.signup({name, surname, email, password, country, city, academic, description, })
+    // values.skills = []
+    // if(values.trx) values.skills.push('trx')
+ 
+    const {name, surname, email, password, country, city, academic, description, train, ...checkboxes } = values
+    const skills = [];
+    for (const key in checkboxes) {
+      if(checkboxes[key]) {
+        skills.push(key)
+      }
+    }
+    console.log(skills)
+    bag.props.signup({name, surname, email, password, country, city, academic, description, skills, train })
     .then((response)=>{
       return response
     }).catch(error => error)

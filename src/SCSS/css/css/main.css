@@ -33,7 +33,7 @@ h2 {
 
 h3 {
   font-family: SFProDisplaySemiBold;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin: 0; }
 
 p {
@@ -69,6 +69,25 @@ p {
   -webkit-text-fill-color: transparent; }
 
 .btn-gradient {
+  background-image: linear-gradient(-185deg, #FFB764, #FF528E);
+  color: #ffffff;
+  width: 304px;
+  height: 45px;
+  border-radius: 30px;
+  border-style: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; }
+
+.btn-gradient-form {
+  display: flex;
+  justify-content: center;
+  font-family: SFProDisplaySemiBold;
+  font-size: 1.1rem;
   background-image: linear-gradient(-185deg, #FFB764, #FF528E);
   color: #ffffff;
   width: 304px;
@@ -238,13 +257,13 @@ button {
 
 .form-sign-up .info-block input {
   width: 100%;
-  border: 0;
   padding: 0px 10px;
   height: 30px;
   font-size: 14px;
   border: 1px solid #cacaca;
   margin-top: 12px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  font-family: SFProDisplayLight; }
 
 .form-sign-up .info-block input:focus {
   outline: none;
@@ -255,6 +274,55 @@ button {
   display: flex;
   justify-content: flex-end;
   color: #e04646; }
+
+.form-sign-up .info-block select {
+  width: 100%;
+  padding: 0px 10px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  margin-top: 12px;
+  border-radius: 20px;
+  background-color: white;
+  font-family: SFProDisplayLight; }
+
+.form-sign-up .info-block textarea {
+  width: 100%;
+  padding: 4px 10px;
+  height: 100px;
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  margin-top: 12px;
+  border-radius: 8px;
+  background-color: white;
+  font-family: SFProDisplayLight; }
+
+.form-sign-up .info-block section.skill-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 12px; }
+
+.form-sign-up .info-block section.skill-group img {
+  width: 100px;
+  border-radius: 15px; }
+
+.form-sign-up .info-block section.skill-group input[type=checkbox]:checked +
+label img {
+  opacity: 0.7; }
+
+.form-sign-up input#trx {
+  display: none; }
+
+.form-sign-up input#yoga {
+  display: none; }
+
+.form-sign-up input#musculation {
+  display: none; }
+
+.form-sign-up input#cardio {
+  display: none; }
 
 .main {
   width: 100vw; }
