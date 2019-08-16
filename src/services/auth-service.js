@@ -10,8 +10,6 @@ class AuthService {
 
   signup(user) {
     const { name, surname, email, password, country, city, academic, description, skills, train } = user;
-    
-    console.log('asvdsfdgnvda' + user);
     return this.auth.post('/auth/signup', {name, surname, email, password, country, city, academic, description, skills, train})
       .then(({ data }) => data);
   }
