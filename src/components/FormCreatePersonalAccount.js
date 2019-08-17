@@ -60,10 +60,11 @@ getImage = (url) => {
   } 
 
 export default withAuth(withFormik({
-  mapPropsToValues({email, password }) {
+  mapPropsToValues({email, password, images }) {
     return ({
       email: email || '',
-      password: password || ''
+      password: password || '',
+      images: images || ''
     })
   },
   validationSchema: Yup.object().shape({
@@ -77,6 +78,7 @@ export default withAuth(withFormik({
       .required()
   }),
   handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
+
     const {email, password, images} = values
     console.log(values)
     bag.props.signup({email, password, images})

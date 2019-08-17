@@ -9,6 +9,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Splash from './pages/Splash';
 import Instructions from './pages/Instructions';
+import TrainerDetails from './pages/TrainerDetails.js';
 
 import AuthProvider from './contexts/auth-context.js';
 
@@ -31,9 +32,10 @@ class App extends Component {
           <div className="main">
             <Switch>
               <AnonRoute path='/' exact component={Splash} />
-              <AnonRoute path="/signup" component={Signup} />
-              <AnonRoute path="/login" component={Login} />
-              <PrivateRoute path="/explore" component={Explore} />
+              <AnonRoute path="/signup" exact component={Signup} />
+              <AnonRoute path="/login" exact component={Login} />
+              <PrivateRoute path="/explore" exact component={Explore} />
+              <PrivateRoute path="/trainer" exact component={TrainerDetails} />
               <AnonRoute path="/instructions" exact component={Instructions} />
             </Switch>
           </div>

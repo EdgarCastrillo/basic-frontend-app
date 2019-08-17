@@ -26,7 +26,7 @@ class Navbar extends Component {
           </ul>
         </div>
         <div className="image-container">
-          <span><img className="bookmark" src="/img/icons-bookmark.png" alt="bookmark"/></span>
+          <span><img className="bookmark" src="/img/icons-bookmark-black.png" alt="bookmark"/></span>
           <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
         </div>
       </div>

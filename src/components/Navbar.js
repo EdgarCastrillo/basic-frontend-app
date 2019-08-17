@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <div className='container-nav'>
         <img src="/img/icons-compass.png" alt="explore"/>
-        <img src="/img/icons-bookmark.png" alt="bookmarks"/>
+        <img src="/img/icons-bookmark-black.png" alt="bookmarks"/>
         <img src="/img/icons-search.png" alt="search"/>
         <img src="/img/icons-speech-bubble.png" alt="messages"/>
         <img src="/img/icons-profile.png" alt="profile"/>

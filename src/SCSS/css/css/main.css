@@ -307,18 +307,18 @@ ul {
   background-color: white;
   font-family: SFProDisplayLight; }
 
-.form-sign-up .info-block section.skill-group {
+.form-sign-up .info-block .skill-group {
   display: flex;
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
   margin-top: 12px; }
 
-.form-sign-up .info-block section.skill-group img {
+.form-sign-up .info-block .skill-group img {
   width: 100px;
   border-radius: 15px; }
 
-.form-sign-up .info-block section.skill-group input[type=checkbox]:checked +
+.form-sign-up .info-block .skill-group input[type=checkbox]:checked +
 label img {
   opacity: 0.7; }
 
@@ -427,6 +427,111 @@ label img {
 
 .explore-container .explore-content .card-container {
   margin-bottom: 20px; }
+
+.details-container {
+  margin-bottom: 70px; }
+
+.details-container .img-container {
+  height: 50vh;
+  position: relative; }
+
+.details-container .img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.details-container .img-container .bookmark {
+  position: absolute;
+  object-fit: contain;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: none; }
+
+.details-container .img-container .previous {
+  position: absolute;
+  object-fit: contain;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 20px;
+  box-shadow: none;
+  color: #ffffff; }
+
+.details-container .img-container .trainer-name {
+  position: absolute;
+  object-fit: contain;
+  width: 70%;
+  bottom: 17px;
+  left: 19px;
+  box-shadow: none;
+  background: linear-gradient(-185deg, #FFB764, #FF528E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.details-container .img-container .trainer-city {
+  font-family: SFProDisplaySemiBold;
+  font-size: 1.1rem;
+  position: absolute;
+  object-fit: contain;
+  width: 70%;
+  bottom: 14px;
+  left: 20px;
+  box-shadow: none;
+  color: #ffffff; }
+
+.details-container .details-content {
+  padding: 20px 20px 0 20px; }
+
+.details-container .details-content .details-section {
+  margin-bottom: 24px; }
+
+.details-container .details-content .details-section h3 {
+  margin-bottom: 12px; }
+
+.details-container .details-content .details-section ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; }
+
+.details-container .details-content .details-section li {
+  margin: 0 5px 8px 0; }
+
+.details-container .details-content .details-section a {
+  text-decoration: none;
+  border: 1px solid #cacaca;
+  padding: 2px 10px;
+  border-radius: 30px;
+  color: #cacaca;
+  font-size: 0.85rem; }
+
+.details-container .details-content .details-section .skill {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; }
+
+.details-container .details-content .details-section .skill img {
+  width: 31%;
+  border-radius: 15px;
+  margin-top: 10px; }
+
+.details-container .book-now {
+  width: 100%;
+  margin-top: 12px; }
+
+.details-container .book-now .book-now-title {
+  margin-bottom: 12px; }
+
+.details-container .book-now a {
+  list-style-type: none;
+  margin: 0 auto; }
+
+.details-container .book-now button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
 
 .main {
   width: 100vw; }
