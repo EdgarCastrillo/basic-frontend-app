@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import withAuth from './withAuth.js';
 
 class Navbar extends Component {
   render() {  
     return (
-      <div>
-        {this.props.isLoggedIn ? (
-          <>
-            <p>username: {this.props.user.username}</p>
-            <p onClick={this.props.logout}>Logout</p>
-          </>
-        ) : (
-          <>
-            <Link to='/login'>Login</Link>
-            <Link to='/signup'>Signup</Link>
-          </>
-        )}
+      <div className='container-nav'>
+        <img src="/img/icons-compass.png" alt="explore"/>
+        <img src="/img/icons-bookmark.png" alt="bookmarks"/>
+        <img src="/img/icons-search.png" alt="search"/>
+        <img src="/img/icons-speech-bubble.png" alt="messages"/>
+        <img src="/img/icons-profile.png" alt="profile"/>
       </div>
     )
   }

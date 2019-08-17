@@ -53,3 +53,10 @@ p {
   margin: 0;
   font-size: 1rem;
 }
+
+a {
+  font-family: $text;
+  margin: 0;
+  font-size: 1rem;
+  color: $primary-color;
+}

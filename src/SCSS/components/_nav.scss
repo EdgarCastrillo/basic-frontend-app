@@ -1,0 +1,17 @@
+.container-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-around;
+  background-color: $primary-background;
+  border-top: 1px solid $detail-color;
+  padding: 5px 0 5px 0;
+  z-index: 10;
+
+  img {
+    width: 40px;
+  }
+
+}

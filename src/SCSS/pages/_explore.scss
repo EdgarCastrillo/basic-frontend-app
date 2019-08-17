@@ -1,0 +1,21 @@
+.explore-container {
+  width: 100%;
+
+  .explore-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    .title{
+      padding: 0 20px 0 20px;
+    }
+    
+    .card-container {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+}

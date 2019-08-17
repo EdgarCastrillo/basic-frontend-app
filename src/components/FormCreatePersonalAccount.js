@@ -1,12 +1,22 @@
 import React , {Component}from 'react';
-import withAuth from '../components/withAuth.js';
+import withAuth from './withAuth.js';
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
+import FileComponent from './FileComponent'
 
 class FormCreatePersonalAccount extends Component{
   state = {
     redirect: false,
+    images: []
   }
+
+getImage = (url) => {
+  const {images} = this.state
+  images.push(url)
+  this.setState({
+    images,
+  })
+}
 
   render() {
     const {errors, isSubmitting, touched } = this.props
@@ -26,6 +36,7 @@ class FormCreatePersonalAccount extends Component{
               <div className='img-upload'>
                 <h3>Profile picture</h3>
                 <p>add a profile picture</p>
+                <FileComponent getImage={this.getImage}/>
               </div>
             </section>
             <section className='info-form'>
@@ -62,13 +73,13 @@ export default withAuth(withFormik({
       .required(),
     password: Yup
       .string()
-      .min(8)
+      .min(1)
       .required()
   }),
   handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
-    const {email, password} = values
+    const {email, password, images} = values
     console.log(values)
-    bag.props.signup({email, password})
+    bag.props.signup({email, password, images})
     .then((response)=>{
       return response
     }).catch(error => error)

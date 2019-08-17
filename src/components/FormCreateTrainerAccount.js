@@ -1,5 +1,5 @@
 import React , {Component}from 'react';
-import withAuth from '../components/withAuth.js';
+import withAuth from './withAuth.js';
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 
@@ -199,7 +199,7 @@ export default withAuth(withFormik({
       .required(),
     password: Yup
       .string()
-      .min(8)
+      .min(1)
       .required(),
     country: Yup
       .string()
@@ -218,14 +218,11 @@ export default withAuth(withFormik({
       .required('Academic degree is required'),
     description: Yup
       .string()
-      .max(10)
+      .max(1)
       .required('Description is required'),
   }),
   handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
-    // values.skills = []
-    // if(values.trx) values.skills.push('trx')
- 
-    const {name, surname, email, password, country, city, academic, description, train, ...checkboxes } = values
+    const {name, surname, avatarURL, email, password, country, city, academic, description, train, ...checkboxes } = values
     const skills = [];
     for (const key in checkboxes) {
       if(checkboxes[key]) {
@@ -233,7 +230,7 @@ export default withAuth(withFormik({
       }
     }
     console.log(skills)
-    bag.props.signup({name, surname, email, password, country, city, academic, description, skills, train })
+    bag.props.signup({name, surname, avatarURL, email, password, country, city, academic, description, skills, train })
     .then((response)=>{
       return response
     }).catch(error => error)

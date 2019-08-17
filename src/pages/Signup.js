@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import withAuth from '../components/withAuth.js';
+import withAuth from '../components/withAuth';
 import Button from '../components/Button'
 import FormCreatePersonalAccount from '../components/FormCreatePersonalAccount.js';
 import FormCreateTrainerAccount from '../components/FormCreateTrainerAccount.js';
@@ -7,20 +7,20 @@ import FormCreateTrainerAccount from '../components/FormCreateTrainerAccount.js'
 class Signup extends Component {
 
   state = {
-    username: '',
+    mail: '',
     password: '',
     form: 0
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const username = this.state.username;
+    const mail = this.state.mail;
     const password = this.state.password;
 
-    this.props.signup({ username, password })
+    this.props.signup({ mail, password })
       .then( (user) => {
         this.setState({
-            username: '',
+            mail: '',
             password: '',
         });
       })
