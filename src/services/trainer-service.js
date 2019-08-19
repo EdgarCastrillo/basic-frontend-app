@@ -12,7 +12,14 @@ class TrainerService {
     return this.trainers.get('/trainers/all')
       .then(({ data }) => data);
   }
+
+  getTrainerById(id) {
+    return this.trainers.get(`trainers/${id}`)
+      .then(({ data }) => data);
+  }
 }
+
+
 
 const trainerService = new TrainerService();
 

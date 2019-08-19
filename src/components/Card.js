@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import withAuth from './withAuth.js';
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 class Navbar extends Component {
   render() {  
@@ -18,10 +18,12 @@ class Navbar extends Component {
           })}
           </ul>
         </section>
-        <section className="image-container">
-          <span><img className="bookmark" src="/img/icons-bookmark-black.png" alt="bookmark"/></span>
-            <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
-        </section>
+        <Link to={`/trainer/${this.props.trainer._id}`}>
+          <section className="image-container">
+            <span><img className="bookmark" src="/img/icons-bookmark-black.png" alt="bookmark"/></span>
+              <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
+          </section>
+        </Link>
       </section>
     )
   }

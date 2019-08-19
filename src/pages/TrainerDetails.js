@@ -8,32 +8,32 @@ import trainerService from '../services/trainer-service'
 
 class Explore extends Component {
   state = {
-    name: '',
-    city: '',
+    trainer: {}
   }
 
   componentDidMount() {
-    trainerService.getTrainers()
-    .then((trainers) =>{
-      this.setState(trainers)
-      console.log(this.state.trainers)
+    trainerService.getTrainerById(this.props.match.params.id)
+    .then((trainer) =>{
+      console.log(trainer.trainer)
+      this.setState({trainer: trainer.trainer})
     })
     .catch((error) => {
       console.log(error)
     })
   }
+
+
   render() {
+    const {trainer} = this.state
     return (
       <section className="details-container">
         <section className="img-trainer">
-          <TrainerImages/>
+          <TrainerImages data={trainer}/>
         </section>
         <section className="details-content">
           <section className="details-section">
             <h3>Description</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit. Duis eget nibh sed sem tempus 
-            pharetra non nec odio. Duis eget nibh sed sem tempus.</p>
+            <p>{trainer.description}</p>
           </section>
           <section className="details-section">
             <h3>Academic degree</h3>
