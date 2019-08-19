@@ -304,6 +304,12 @@ label img {
 .form-sign-up input#cardio {
   display: none; }
 
+.form-sign-up input#stretching {
+  display: none; }
+
+.form-sign-up input#pilates {
+  display: none; }
+
 .container-nav {
   display: flex;
   flex-direction: row;
@@ -313,7 +319,7 @@ label img {
   justify-content: space-around;
   background-color: #ffffff;
   border-top: 1px solid #cacaca;
-  padding: 5px 0 5px 0;
+  padding: 5px 0 1px 0;
   z-index: 10; }
   .container-nav img {
     width: 40px; }
@@ -342,16 +348,16 @@ label img {
   .card-container h3 {
     font-size: 1.25rem;
     margin-bottom: 10px; }
-  .card-container ul {
+  .card-container .skills-content ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap; }
-  .card-container li {
+  .card-container .skills-content li {
     margin: 0 5px 8px 0; }
-  .card-container a {
+  .card-container .skills-content p {
     text-decoration: none;
     border: 1px solid #cacaca;
-    padding: 2px 10px;
+    padding: 0 10px;
     border-radius: 30px;
     color: #cacaca;
     font-size: 0.85rem; }
@@ -467,11 +473,41 @@ label img {
       margin-bottom: 12px; }
     .details-container .book-now a {
       list-style-type: none;
-      margin: 0 auto; }
+      margin: 0 auto;
+      text-decoration: none; }
     .details-container .book-now button {
       display: flex;
       justify-content: center;
       margin-top: 20px; }
+
+.profile-container {
+  width: 100%; }
+  .profile-container .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 70px 20px 70px 20px; }
+    .profile-container .profile-content .header-profile {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px; }
+      .profile-container .profile-content .header-profile .img-container img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 300px; }
+    .profile-container .profile-content .info-container {
+      margin-bottom: 30px; }
+      .profile-container .profile-content .info-container .sub-title {
+        font-family: SFProDisplaySemiBold;
+        font-size: 1.25rem;
+        margin-bottom: 2px; }
+      .profile-container .profile-content .info-container .info-profile {
+        width: 100%;
+        font-size: 14px;
+        border-bottom: 1px solid #cacaca;
+        margin-top: 12px;
+        font-family: SFProDisplayLight; }
 
 .main {
   width: 100vw; }

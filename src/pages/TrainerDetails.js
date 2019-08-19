@@ -3,8 +3,25 @@ import withAuth from '../components/withAuth.js';
 import Navbar from '../components/Navbar';
 import TrainerImages from '../components/TrainerImages.js';
 import Button from '../components/Button'
+import trainerService from '../services/trainer-service'
+
 
 class Explore extends Component {
+  state = {
+    name: '',
+    city: '',
+  }
+
+  componentDidMount() {
+    trainerService.getTrainers()
+    .then((trainers) =>{
+      this.setState(trainers)
+      console.log(this.state.trainers)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
   render() {
     return (
       <section className="details-container">

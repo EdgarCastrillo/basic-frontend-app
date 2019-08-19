@@ -1,0 +1,42 @@
+.profile-container {
+  width: 100%;
+
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 70px 20px 70px 20px;
+
+    .header-profile {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      .img-container {
+
+        img{
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 300px;
+        }
+      }
+    }
+
+    .info-container {
+      margin-bottom: 30px;
+      .sub-title {
+        font-family: $subTitle;
+        font-size: 1.25rem;
+        margin-bottom: 2px;
+      }
+      .info-profile {
+        width: 100%;
+        font-size: 14px;
+        border-bottom: 1px solid $detail-color;
+        margin-top: 12px;
+        font-family: $text;    
+      }
+    }
+  }
+}

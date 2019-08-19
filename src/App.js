@@ -10,12 +10,16 @@ import Login from './pages/Login';
 import Splash from './pages/Splash';
 import Instructions from './pages/Instructions';
 import TrainerDetails from './pages/TrainerDetails.js';
+import ProfileTrainer from './pages/ProfileTrainer.js';
+import Bookmarks from './pages/Bookmarks.js';
+import Search from './pages/Search.js';
 
 import AuthProvider from './contexts/auth-context.js';
 
 import '../src/SCSS/css/main.css';
 
 import firebase from "firebase";
+import Profile from './pages/Profile.js';
  
 const config = {
   apiKey: "AIzaSyDyTjiXMb-ZWnEiyOeU0czWUFPeCt-W3us",
@@ -29,16 +33,20 @@ class App extends Component {
     return (
       <Router>
         <AuthProvider>
-          <div className="main">
+          <section className="main">
             <Switch>
               <AnonRoute path='/' exact component={Splash} />
               <AnonRoute path="/signup" exact component={Signup} />
               <AnonRoute path="/login" exact component={Login} />
               <PrivateRoute path="/explore" exact component={Explore} />
               <PrivateRoute path="/trainer" exact component={TrainerDetails} />
+              <PrivateRoute path="/bookmarks" exact component={Bookmarks} />
+              <PrivateRoute path="/search" exact component={Search} />
+              <PrivateRoute path="/profile" exact component={Profile} />
+              <PrivateRoute path="/profile-trainer" exact component={ProfileTrainer} />
               <AnonRoute path="/instructions" exact component={Instructions} />
             </Switch>
-          </div>
+          </section>
         </AuthProvider>
       </Router>
     )

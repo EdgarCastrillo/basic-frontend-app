@@ -125,6 +125,24 @@ class FormCreatePersonalAccount extends Component{
                   />
                   <label className='skills' htmlFor='trx'><img src="/img/trx.jpg" alt=""/></label>
                   <Field
+                  id='pilates'
+                  name="pilates"
+                  type="checkbox"
+                  checked={values.pilates}
+                  className={"checkbox" + (errors.pilates && touched.pilates ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='pilates'><img src="/img/trx.jpg" alt=""/></label>
+                  <Field
+                  id='stretching'
+                  name="stretching"
+                  type="checkbox"
+                  checked={values.stretching}
+                  className={"checkbox" + (errors.stretching && touched.stretching ? " is-invalid" : "")
+                  }
+                  />
+                  <label className='skills' htmlFor='stretching'><img src="/img/trx.jpg" alt=""/></label>
+                  <Field
                   id='yoga'
                   name="yoga"
                   type="checkbox"
@@ -156,7 +174,7 @@ class FormCreatePersonalAccount extends Component{
               <div className='info-block'>
                 <label>Where do I train?</label>
                 <Field
-                name="trian"
+                name="train"
                 component='select'
                 >
                 <option value="" disabled label="Select your gym" />
@@ -175,7 +193,7 @@ class FormCreatePersonalAccount extends Component{
 }
   
 export default withAuth(withFormik({
-  mapPropsToValues({name, surname, email, password, country, city, academic, description,}) {
+  mapPropsToValues({name, surname, email, password, country, city, academic, description, train}) {
     return ({
       name: name || '',
       surname: surname || '',
@@ -185,6 +203,7 @@ export default withAuth(withFormik({
       city: city || '',
       academic: academic || '',
       description: description || '',
+      train: train || '',
     })
   },
   validationSchema: Yup.object().shape({
@@ -220,6 +239,11 @@ export default withAuth(withFormik({
       .string()
       .max(1)
       .required('Description is required'),
+    train: Yup
+      .string()
+      .oneOf(['Metropolitan', 'Dir'])
+      .min(1)
+      .required('Train is required'),
   }),
   handleSubmit(values, {setSubmitting, setErrors, resetForm, ...bag})  {
     const {name, surname, avatarURL, email, password, country, city, academic, description, train, ...checkboxes } = values

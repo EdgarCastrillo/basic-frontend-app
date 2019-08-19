@@ -1,35 +1,28 @@
 import React, { Component } from 'react';
 import withAuth from './withAuth.js';
+import Link from 'react-router-dom';
 
 class Navbar extends Component {
   render() {  
     return (
-      <div className='card-container'>
-        <h3>Rose</h3>
-        <div>
+      <section className='card-container'>
+        <h3>{this.props.trainer.name}</h3>
+        <section className="skills-content">
           <ul>
-            <li>
-              <a href="/">Inef</a>
-            </li>
-            <li>
-              <a href="/">Musculation</a>
-            </li>
-            <li>
-              <a href="/">Cardio</a>
-            </li>
-            <li>
-              <a href="/">yoga</a>
-            </li>
-            <li>
-              <a href="/">yoga</a>
-            </li>
+          {this.props.trainer.skills.map(skill=> {
+            return (
+               <li>
+                <p>{skill}</p>
+              </li>  
+            )
+          })}
           </ul>
-        </div>
-        <div className="image-container">
+        </section>
+        <section className="image-container">
           <span><img className="bookmark" src="/img/icons-bookmark-black.png" alt="bookmark"/></span>
-          <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
-        </div>
-      </div>
+            <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
+        </section>
+      </section>
     )
   }
 }

@@ -23,12 +23,12 @@ class Explore extends Component {
 
   render() {
     return (
-      <div className="explore-container">
+      <section className="explore-container">
         <TopNav/>
         <section className="explore-content">
-          <section className="title">
-           <h2>Personal Trainers</h2> 
-          </section>
+          <div className="title">
+           <h2>My bookmarks</h2> 
+          </div>
           {this.state.trainers.map(trainer=> {
             return (
               <>
@@ -38,7 +38,7 @@ class Explore extends Component {
           })}
           <Navbar/>
         </section>
-      </div>
+      </section>
     )
   }
 }
