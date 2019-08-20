@@ -9,7 +9,7 @@ class BookmarkService {
   }
 
   putBookmarks(id) {
-    return this.user.put(`/bookmark/${id}/new`)
+    return this.bookmark.put(`/users/bookmarks/${id}/update`)
       .then(({ data }) => data);
   }
 

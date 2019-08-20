@@ -22,6 +22,7 @@ class Explore extends Component {
   }
 
   render() {
+    const currentBookmarks = this.props.user.myBookmarks
     return (
       <div className="explore-container">
         <TopNav/>
@@ -32,7 +33,10 @@ class Explore extends Component {
           {this.state.trainers.map(trainer=> {
             return (
               <>
-                <Card trainer={trainer}/>
+                { currentBookmarks.includes(trainer._id) ? 
+                <Card trainer={trainer} bookmark={true}/>
+               : <Card trainer={trainer} bookmark={false}/> 
+               }
               </>
             )
           })}

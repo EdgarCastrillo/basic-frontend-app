@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 import withAuth from './withAuth.js';
 import {Link} from 'react-router-dom'
-
+import bookmarkService from '../services/bookmark-service'
 class Navbar extends Component {
-  state = {
-    isSaved: false,
-  }
 
   handleChange = () => {
   console.log(this.props.trainer._id)
-    if(this.state.isSaved){
-      this.setState({
-        isSaved: false,
-      });
-    }  else {
-      this.setState({
-        isSaved: true,
-      });
-    }
+    bookmarkService.putBookmarks(this.props.trainer._id)
+    .then(response => this.props.me())
+    .catch(error => console.log(error))
   }
-  
 
-  render() {  
+  render() {
+    console.log(this.props)  
     return (
       <section className='card-container'>
         <h3>{this.props.trainer.name}</h3>
@@ -38,8 +29,7 @@ class Navbar extends Component {
         </section>
           <section className="image-container">
             <span onClick={this.handleChange} value={false}>
-              { this.state.isSaved ? <img className="bookmark" src="/img/icon-bookmark-gradient.png" alt="bookmark"/>
-
+              { this.props.bookmark ? <img className="bookmark" src="/img/icon-bookmark-gradient.png" alt="bookmark"/>
               :
               <img className="bookmark" src="/img/icon-bookmark-white.png" alt="bookmark"/>
               }
