@@ -1,10 +1,22 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom' 
 
 class Splash extends Component {
+  state = {
+    showing: true,
+  }
+
+  
 render() {
+    setTimeout( () => {
+      this.setState({
+        showing:false
+      })
+    }, 2000)
     return (
       <section className='splash'>
         <h1>Fit</h1>
+      { this.state.showing ? null : <Redirect to="/login" /> } 
       </section>
     )
   }

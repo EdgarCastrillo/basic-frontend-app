@@ -24,7 +24,7 @@ class Explore extends Component {
     academic: this.props.user.academic,
     academicState: false,
     description: this.props.user.description,
-    descriptioState: false,
+    descriptionState: false,
     skills: this.props.user.skills,
     skillsState: false,
     train: this.props.user.train,
@@ -47,7 +47,7 @@ class Explore extends Component {
   }
 
   render() {
-    const {name, nameState, surname, surnameState, images, email, emailState, country, city, academic, description, skills, train, trainer} = this.state
+    const {name, nameState, surname, surnameState, images, email, country, city, academic, description, descriptionState, skills, train, trainer} = this.state
     console.log(email)
     return (
       <section className="profile-container">
@@ -59,7 +59,7 @@ class Explore extends Component {
               <p onClick={this.props.logout}>Logout</p>
             </section>
             <div className="img-container">
-                <img src='/img/personal-trainers/personal-trainer-6.jpg' alt='imageprofile'/>
+              <img src={this.props.user.imageUrl} alt=""/>
             </div>
           </section>
           <section className="info-container">
@@ -91,7 +91,9 @@ class Explore extends Component {
               </section>
               <section className="info-container">
                 <p className="sub-title">Description</p>
-                <p className="info-profile">{description ? description : 'about you'}</p>
+                {this.state.descriptionState ?  <ProfileForm name='description' value={description ? description : ''} changeStateFather={this.handleChangeState} /> : 
+                <p onClick={() => this.handleChangeState(descriptionState, 'descriptionState')} className="info-profile"> {description ? description : 'About you'}</p>
+                }
               </section>
               <section className="info-container">
                 <p className="sub-title">Skills</p>

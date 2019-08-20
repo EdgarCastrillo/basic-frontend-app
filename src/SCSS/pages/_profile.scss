@@ -14,17 +14,36 @@
 
       .img-container {
 
-        img{
-            height: 100px;
-            width: 100px;
-            object-fit: cover;
-            border-radius: 300px;
+        img {
+          height: 100px;
+          width: 100px;
+          object-fit: cover;
+          border-radius: 300px;
         }
       }
     }
 
     .info-container {
       margin-bottom: 30px;
+      div{
+        border-bottom: 1px solid #ffb688;
+
+        .input-edit {
+          width: 80%;
+          font-size: 14px;
+          border: none;
+          margin-top: 12px;
+          font-family: $text;
+        }
+        input:focus { 
+          border: none;
+          text-decoration: none;
+        }
+        .input-update {
+          padding-bottom: 2px;
+        }
+      }
+
       .sub-title {
         font-family: $subTitle;
         font-size: 1.25rem;

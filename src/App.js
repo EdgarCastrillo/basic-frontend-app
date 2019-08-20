@@ -19,7 +19,7 @@ import AuthProvider from './contexts/auth-context.js';
 import '../src/SCSS/css/main.css';
 
 import firebase from "firebase";
- 
+
 const config = {
   apiKey: "AIzaSyDyTjiXMb-ZWnEiyOeU0czWUFPeCt-W3us",
   authDomain: "fit-app-bc00a.firebaseapp.com",

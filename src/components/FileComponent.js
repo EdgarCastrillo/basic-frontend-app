@@ -27,8 +27,6 @@ class FileUploadComponent extends Component {
       .getDownloadURL()
       .then(url => {
         this.props.getImage(url);
-        
-        console.log(url)
         this.setState({ avatarURL: url })
       });
   };
@@ -38,7 +36,7 @@ class FileUploadComponent extends Component {
     return (
       <div>
         <form>
-          <label>Avatar:</label>
+          <label>Image:</label>
           {isUploading && <p>Progress: {progress}</p>}
           {avatarURL && <img src={avatarURL} alt='name'/>}
           <FileUploader

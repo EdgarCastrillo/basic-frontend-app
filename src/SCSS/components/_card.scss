@@ -20,11 +20,14 @@
     
   p {
       text-decoration: none;
-      border: 1px solid $detail-color;
+      border: 1px solid #ffb688;
       padding: 0 10px;
       border-radius: 30px;
       color: $detail-color;
       font-size: 0.85rem;
+      background: linear-gradient(-185deg, #FFB764, #FF528E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -36,10 +39,10 @@
     .bookmark {
       position: absolute;
       object-fit: contain;
-      width: 40px;
-      height: 40px;
-      top: 10px;
-      right: 10px;
+      width: 45px;
+      height: 60px;
+      top: 5px;
+      right: 5px;
       box-shadow: none;
     }
     

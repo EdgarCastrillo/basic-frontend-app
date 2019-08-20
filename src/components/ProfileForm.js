@@ -29,8 +29,8 @@ import updateService from '../services/updates-service'
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleOnChange} value={this.state.value} name={this.props.name} />
-          <input type="submit" value="edit" />
+          <input className="input-edit" type="text" onChange={this.handleOnChange} value={this.state.value} name={this.props.name} />
+          <input className="input-update"type="submit" value="update" />
         </form>
       </div>
     )

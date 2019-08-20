@@ -356,21 +356,24 @@ label img {
     margin: 0 5px 8px 0; }
   .card-container .skills-content p {
     text-decoration: none;
-    border: 1px solid #cacaca;
+    border: 1px solid #ffb688;
     padding: 0 10px;
     border-radius: 30px;
     color: #cacaca;
-    font-size: 0.85rem; }
+    font-size: 0.85rem;
+    background: linear-gradient(-185deg, #FFB764, #FF528E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   .card-container .image-container {
     height: 50vh;
     position: relative; }
     .card-container .image-container .bookmark {
       position: absolute;
       object-fit: contain;
-      width: 40px;
-      height: 40px;
-      top: 10px;
-      right: 10px;
+      width: 45px;
+      height: 60px;
+      top: 5px;
+      right: 5px;
       box-shadow: none; }
     .card-container .image-container img {
       height: 100%;
@@ -378,6 +381,9 @@ label img {
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 3px 3px 12px #ececec; }
+
+.search-container {
+  margin-top: 70px; }
 
 .explore-container {
   width: 100%; }
@@ -417,7 +423,8 @@ label img {
       top: 20px;
       left: 20px;
       box-shadow: none;
-      color: #ffffff; }
+      color: #ffffff;
+      text-shadow: 1px 1px 23px #a4a4a4; }
     .details-container .img-container .trainer-name {
       position: absolute;
       object-fit: contain;
@@ -437,7 +444,8 @@ label img {
       bottom: 14px;
       left: 20px;
       box-shadow: none;
-      color: #ffffff; }
+      color: #ffffff;
+      text-shadow: 1px 1px 23px #a4a4a4; }
   .details-container .details-content {
     padding: 20px 20px 0 20px; }
     .details-container .details-content .details-section {
@@ -498,6 +506,19 @@ label img {
         border-radius: 300px; }
     .profile-container .profile-content .info-container {
       margin-bottom: 30px; }
+      .profile-container .profile-content .info-container div {
+        border-bottom: 1px solid #ffb688; }
+        .profile-container .profile-content .info-container div .input-edit {
+          width: 80%;
+          font-size: 14px;
+          border: none;
+          margin-top: 12px;
+          font-family: SFProDisplayLight; }
+        .profile-container .profile-content .info-container div input:focus {
+          border: none;
+          text-decoration: none; }
+        .profile-container .profile-content .info-container div .input-update {
+          padding-bottom: 2px; }
       .profile-container .profile-content .info-container .sub-title {
         font-family: SFProDisplaySemiBold;
         font-size: 1.25rem;

@@ -19,8 +19,6 @@ class TrainerService {
   }
 }
 
-
-
 const trainerService = new TrainerService();
 
 export default trainerService;

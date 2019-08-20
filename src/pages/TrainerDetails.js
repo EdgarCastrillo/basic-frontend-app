@@ -5,7 +5,6 @@ import TrainerImages from '../components/TrainerImages.js';
 import Button from '../components/Button'
 import trainerService from '../services/trainer-service'
 
-
 class Explore extends Component {
   state = {
     trainer: {}
@@ -48,12 +47,15 @@ class Explore extends Component {
           </section>
           <section className="details-section">
             <h3>Skills</h3>
-            <section className='skill'>
-                  <img className="skill-img" src="/img/personal-trainers/personal-trainer-4.jpg" alt=""/>
-                  <img className="skill-img" src="/img/personal-trainers/personal-trainer-4.jpg" alt=""/>
-                  <img className="skill-img" src="/img/personal-trainers/personal-trainer-4.jpg" alt=""/>
-                  <img className="skill-img" src="/img/personal-trainers/personal-trainer-4.jpg" alt=""/>
-            </section>
+            <ul>
+            {trainer.skills ? (trainer.skills.map(skill=> {
+              return (
+                <li>
+                  <p>{skill}</p>
+                </li>  
+                )
+              })) : null}
+            </ul>
           </section>
           <section className="details-section">
             <h3>Where do I train?</h3>

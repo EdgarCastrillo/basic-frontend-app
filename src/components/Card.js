@@ -20,8 +20,8 @@ class Navbar extends Component {
         </section>
         <Link to={`/trainer/${this.props.trainer._id}`}>
           <section className="image-container">
-            <span><img className="bookmark" src="/img/icons-bookmark-black.png" alt="bookmark"/></span>
-              <img src="/img/personal-trainers/personal-trainer-7.jpg" alt=""/>
+            <span><img className="bookmark" src="/img/icon-bookmark-gradient.png" alt="bookmark"/></span>
+              <img src={this.props.trainer.imageUrl} alt=""/>
           </section>
         </Link>
       </section>
