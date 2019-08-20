@@ -117,7 +117,7 @@ body {
   padding: 0; }
 
 button {
-  margin: 0 auto;
+  margin: 0;
   padding: 0; }
 
 ul {
@@ -181,7 +181,12 @@ ul {
   flex-direction: column;
   padding: 20px; }
   .container-instructions .previous {
-    margin-bottom: 74px; }
+    margin-bottom: 74px;
+    display: flex;
+    align-items: center; }
+    .container-instructions .previous img {
+      width: 25px;
+      height: 25px; }
   .container-instructions .information {
     height: 100%;
     display: flex;
@@ -201,7 +206,12 @@ ul {
     display: flex;
     flex-direction: row; }
   .main .selector-group .previous {
-    margin-bottom: 74px; }
+    margin-bottom: 74px;
+    display: flex;
+    align-items: center; }
+    .main .selector-group .previous img {
+      width: 25px;
+      height: 25px; }
   .main .selector-group .info {
     display: flex;
     flex-direction: column;
@@ -424,7 +434,12 @@ label img {
       left: 20px;
       box-shadow: none;
       color: #ffffff;
-      text-shadow: 1px 1px 23px #a4a4a4; }
+      text-shadow: 1px 1px 23px #a4a4a4;
+      display: flex;
+      align-items: center; }
+      .details-container .img-container .previous .previuos-icon {
+        width: 25px;
+        height: 25px; }
     .details-container .img-container .trainer-name {
       position: absolute;
       object-fit: contain;
@@ -510,7 +525,7 @@ label img {
         border-bottom: 1px solid #ffb688; }
         .profile-container .profile-content .info-container div .input-edit {
           width: 80%;
-          font-size: 14px;
+          font-size: 20px;
           border: none;
           margin-top: 12px;
           font-family: SFProDisplayLight; }

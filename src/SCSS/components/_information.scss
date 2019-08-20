@@ -7,6 +7,12 @@
 
   .previous{
     margin-bottom: 74px;
+    display: flex;
+    align-items: center;
+    img{
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .information {

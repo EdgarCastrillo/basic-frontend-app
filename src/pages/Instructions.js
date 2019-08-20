@@ -7,7 +7,7 @@ class Instructions extends Component {
       <section className='container-instructions'>
         <div className='previous'>
           <button onClick={this.props.history.goBack}>
-          <p>Previous</p>
+          <p className="previous"><img className="previous-icon" src="/img/icons8-back-black.png" alt="previous icon" />Previous</p>
           </button>
         </div>
         <div className='information'>

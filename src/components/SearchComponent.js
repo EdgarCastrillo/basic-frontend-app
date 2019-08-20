@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
 import withAuth from '../components/withAuth.js';
 import trainerService from '../services/trainer-service';
+import { Link } from 'react-router-dom'
 
 class Explore extends Component {
   state={
     value: this.props.value,
     trainers: [],
-    showingTrainers: []
+    showingTrainers: [],
+    searchValue : null
   }
 
 
 handleChange = (event) => {  
   const {value} = event.target;
-  this.setState({value});
-  const newArray = this.state.trainers.trainers.map(trainer => {
-    if(trainer.name.includes(this.state.value) || trainer.city.includes(this.state.value)){
-      return trainer
-    }
-    else{
-      return null
-    }
+      this.setState({
+        value,
+        searchValue: value.toLowerCase()
+      });
+  const newArray = this.state.trainers.filter(trainer => {
+    console.log(trainer)
+  return trainer.name.toLowerCase().includes(this.state.searchValue) || trainer.city.toLowerCase().includes(this.state.searchValue)
   })
   this.setState({
     showingTrainers: newArray
@@ -29,10 +30,9 @@ handleChange = (event) => {
 componentDidMount = () => {
   trainerService.getTrainers()
   .then((response) =>{
-    console.log(response)
     this.setState({
-      trainers: response,
-      showingTrainers: response
+      trainers: response.trainers,
+      showingTrainers: []
     })
   })
   .catch(error =>{
@@ -41,15 +41,27 @@ componentDidMount = () => {
 }
 
   render() {
-    // console.log(this.state.trainers)
-    console.log(this.state.showingTrainers)
+    console.log(this.state.trainers)
     return (
       <section className="search-container">
         <form>
           <input type="text" placeholder="Search" onChange={this.handleChange} value={this.state.value}/>
         </form>
         <section className="results-container">
-          <p></p>
+          <ul>
+            {this.state.showingTrainers ? this.state.showingTrainers.map(trainer => {
+              return (
+                <Link to={`/trainer/${trainer._id}`}>
+                  <li>
+                    <h3>{trainer.name}</h3>
+                    <section className="image-container">
+                      <img src={trainer.imageUrl} alt=""/>
+                    </section>
+                  </li> 
+                </Link> 
+              )
+              }) : null}
+          </ul>
         </section>
       </section>
     )

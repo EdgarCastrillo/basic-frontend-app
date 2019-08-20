@@ -56,7 +56,7 @@ class Signup extends Component {
         <section className='selector-group'>
           <div className='previous'>
             <button onClick={this.props.history.goBack}>
-            <p>Previous</p>
+            <p className="previous"><img className="previous-icon" src="/img/icons8-back-black.png" alt="previous icon" />Previous</p>
             </button>
           </div>
           <div className='info-container'>
