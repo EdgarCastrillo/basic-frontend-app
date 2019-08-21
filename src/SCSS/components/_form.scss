@@ -87,6 +87,18 @@
       flex-wrap: wrap;
       margin-top:12px;
 
+      .skill-content {
+        position: relative;
+        .skill-text {
+          position: absolute;
+          font-size: 1.3rem;
+          font-family: SFProCompactBold;
+          color: $secundary-color;
+          top: 33%;
+          left: 27%;
+      }
+      }
+
       img {
         width: 100px;
         border-radius: 15px;

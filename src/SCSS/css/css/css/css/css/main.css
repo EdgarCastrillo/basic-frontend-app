@@ -133,7 +133,7 @@ ul {
 
 .splash {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,6 +180,18 @@ ul {
   margin-bottom: 20px;
   background: rgba(247, 156, 156, 0);
   border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  outline: none; }
+
+.login .form-login form input:focus {
+  text-decoration: none;
+  margin-bottom: 20px;
+  background: rgba(247, 156, 156, 0);
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  outline: none; }
+
+.login .form-login form input::placeholder {
   color: #ffffff; }
 
 .container-instructions {
@@ -220,8 +232,13 @@ ul {
   display: flex;
   flex-direction: row; }
 
+.main .selector-group {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
 .main .selector-group .previous {
-  margin-bottom: 74px;
   display: flex;
   align-items: center; }
 
@@ -229,26 +246,32 @@ ul {
   width: 25px;
   height: 25px; }
 
-.main .selector-group .info {
+.main .selector-group .info-container {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  justify-content: center; }
 
-.main .selector-group .info h2 {
+.main .selector-group .info-container .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px; }
+
+.main .selector-group .info-container .info h2 {
   text-align: center; }
 
-.main .selector-group .info p {
+.main .selector-group .info-container .info p {
   text-align: center;
   margin: 10px 10px 30px 10px; }
 
-.main .container.opened {
+.container.opened {
   transform: translateX(-50%); }
 
-.main .selector-group {
+.selector-group {
   width: 100vw;
   padding: 20px; }
 
-.main .form-sign-up {
+.form-sign-up {
   width: 100vw;
   padding: 20px; }
 
@@ -319,6 +342,17 @@ ul {
   width: 100%;
   flex-wrap: wrap;
   margin-top: 12px; }
+
+.form-sign-up .info-block .skill-group .skill-content {
+  position: relative; }
+
+.form-sign-up .info-block .skill-group .skill-content .skill-text {
+  position: absolute;
+  font-size: 1.3rem;
+  font-family: SFProCompactBold;
+  color: #ffffff;
+  top: 33%;
+  left: 27%; }
 
 .form-sign-up .info-block .skill-group img {
   width: 100px;
@@ -505,7 +539,6 @@ input[type=text]:focus, textarea:focus {
 
 .details-container .img-container .previous {
   position: absolute;
-  object-fit: none;
   width: 40px;
   height: 40px;
   top: 20px;
@@ -558,7 +591,10 @@ input[type=text]:focus, textarea:focus {
   flex-wrap: wrap; }
 
 .details-container .details-content .details-section li {
-  margin: 0 5px 8px 0; }
+  margin: 0 5px 8px 0;
+  border-radius: 23px;
+  border: 1px solid #cccccc;
+  padding: 2px 17px; }
 
 .details-container .details-content .details-section a {
   text-decoration: none;
@@ -585,6 +621,10 @@ input[type=text]:focus, textarea:focus {
 
 .details-container .book-now .book-now-title {
   margin-bottom: 12px; }
+
+.details-container .book-now .btn-book-now {
+  display: flex;
+  justify-content: center; }
 
 .details-container .book-now a {
   list-style-type: none;

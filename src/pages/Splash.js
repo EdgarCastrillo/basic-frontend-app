@@ -15,7 +15,9 @@ render() {
     }, 2000)
     return (
       <section className='splash'>
-        <h1>Fit</h1>
+        <section className="splash-logo">
+          <h1>Fit</h1>
+        </section>
       { this.state.showing ? null : <Redirect to="/login" /> } 
       </section>
     )

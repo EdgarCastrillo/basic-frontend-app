@@ -57,7 +57,9 @@ class Explore extends Component {
           <section className="book-now">
             <h3 className="book-now-title">Do you want to train with me?</h3>
             <p>Contact with me to schedule a training</p>
-            <Button route='#' color='btn-gradient' title='Book now' />
+            <section className="btn-book-now">
+              <Button route='#' color='btn-gradient' title='Book now' />
+            </section>
           </section>
         </section>
           <Navbar/>

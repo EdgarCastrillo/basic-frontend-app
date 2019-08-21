@@ -13,6 +13,7 @@ import TrainerDetails from './pages/TrainerDetails.js';
 import Profile from './pages/Profile.js';
 import Bookmarks from './pages/Bookmarks.js';
 import Search from './pages/Search.js';
+import Calendar from './pages/Calendar.js';
 
 import AuthProvider from './contexts/auth-context.js';
 
@@ -41,6 +42,7 @@ class App extends Component {
               <PrivateRoute path="/trainer/:id" exact component={TrainerDetails} />
               <PrivateRoute path="/bookmarks" exact component={Bookmarks} />
               <PrivateRoute path="/search" exact component={Search} />
+              <PrivateRoute path="/calendar" exact component={Calendar} />
               <PrivateRoute path="/profile" exact component={Profile} />
               <AnonRoute path="/instructions" exact component={Instructions} />
             </Switch>

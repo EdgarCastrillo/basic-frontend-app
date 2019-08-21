@@ -96,6 +96,8 @@ class FormTrainers extends Component{
             <div className='info-block'>
               <label>Skills</label>
               <section className='skill-group'>
+              <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='trx'
                   name="trx"
@@ -105,6 +107,9 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='trx'><img src="/img/trx.jpg" alt=""/></label>
+              </section>
+              <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='pilates'
                   name="pilates"
@@ -114,6 +119,9 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='pilates'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='stretching'
                   name="stretching"
@@ -123,6 +131,9 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='stretching'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='yoga'
                   name="yoga"
@@ -132,6 +143,9 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='yoga'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='musculation'
                   name="musculation"
@@ -141,6 +155,9 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='musculation'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Yoga</p>
                 <Field
                   id='cardio'
                   name="cardio"
@@ -150,6 +167,7 @@ class FormTrainers extends Component{
                 }
                 />
                 <label className='skills' htmlFor='cardio'><img src="/img/trx.jpg" alt=""/></label>
+                </section>
               </section>
             </div>
             <div className='info-block'>
