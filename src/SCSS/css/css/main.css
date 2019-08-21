@@ -435,12 +435,17 @@ label img {
   border: 1px solid #cacaca;
   margin-top: 12px;
   border-radius: 20px;
-  font-family: SFProDisplayLight; }
+  font-family: SFProDisplayLight;
+  outline: none; }
+
+input[type=text]:focus, textarea:focus {
+  border: 1px solid #ff8d58; }
 
 .search-by-date .last-trainers {
   display: flex;
   overflow-x: scroll;
-  width: 100%; }
+  width: 100%;
+  overflow-y: hidden; }
 
 .search-by-date .last-trainers .card-container {
   margin-right: 20px; }
@@ -454,6 +459,12 @@ label img {
 
 .search-by-date .last-trainers .card-container:last-child {
   padding-right: 20px; }
+
+.avatar-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 300px; }
 
 .explore-container {
   width: 100%; }
@@ -494,7 +505,7 @@ label img {
 
 .details-container .img-container .previous {
   position: absolute;
-  object-fit: contain;
+  object-fit: none;
   width: 40px;
   height: 40px;
   top: 20px;
@@ -505,7 +516,7 @@ label img {
   display: flex;
   align-items: center; }
 
-.details-container .img-container .previous .previuos-icon {
+.details-container .img-container .previous img {
   width: 25px;
   height: 25px; }
 
@@ -645,7 +656,7 @@ label img {
   flex-direction: column;
   align-content: center;
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 70px; }
 
 .search-container .search-content .title {
   padding: 0 20px 0 20px; }

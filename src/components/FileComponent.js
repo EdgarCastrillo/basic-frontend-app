@@ -34,15 +34,16 @@ class FileUploadComponent extends Component {
   render() {
     const {isUploading, progress, avatarURL} = this.state;
     return (
-      <div>
+      <div className="btn-upload">
         <form>
           {isUploading && <p>Progress: {progress}</p>}
-          {avatarURL && <img src={avatarURL} alt='name'/>}
+          <section className="avatar-container">
+            {avatarURL && <img className="avatar-img" src={avatarURL} alt='name'/>}
+          </section>
           <label style={{backgroundColor: 'lightGrey', color: 'white', padding: 10, borderRadius: 40, pointer: 'cursor'}}>
             <FileUploader
               accept="image/*"
               name="avatar"
-              className="btn-file-upload"
               randomizeFilename
               multiple
               storageRef={firebase.storage().ref("images")}

@@ -23,7 +23,7 @@
 
     .previous {
       position: absolute;
-      object-fit: contain;
+      object-fit: none;
       width: 40px;
       height: 40px;
       top: 20px;
@@ -34,7 +34,7 @@
       display: flex;
       align-items: center;
 
-      .previuos-icon {
+      img {
         width: 25px;
         height: 25px;
       }
