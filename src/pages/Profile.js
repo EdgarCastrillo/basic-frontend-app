@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import withAuth from '../components/withAuth.js';
 import Navbar from '../components/Navbar';
 import TopNav from '../components/TopNav.js';
-import Button from '../components/Button.js';
 import ProfileForm from '../components/ProfileForm';
 
 class Explore extends Component {

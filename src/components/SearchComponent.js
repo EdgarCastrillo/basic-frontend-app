@@ -20,7 +20,7 @@ handleChange = (event) => {
       });
   const newArray = this.state.trainers.filter(trainer => {
     console.log(trainer)
-  return trainer.name.toLowerCase().includes(this.state.searchValue) || trainer.city.toLowerCase().includes(this.state.searchValue)
+  return trainer.name.toLowerCase().includes(this.state.searchValue) || trainer.city.toLowerCase().includes(this.state.searchValue) 
   })
   this.setState({
     showingTrainers: newArray
@@ -45,7 +45,7 @@ componentDidMount = () => {
     return (
       <section className="search-container">
         <form>
-          <input type="text" placeholder="Search" onChange={this.handleChange} value={this.state.value}/>
+          <input className="search-inp" type="text" placeholder="Search" onChange={this.handleChange} value={this.state.value}/>
         </form>
         <section className="results-container">
           <ul>
@@ -53,12 +53,25 @@ componentDidMount = () => {
               return (
                 <Link to={`/trainer/${trainer._id}`}>
                   <li>
-                    <h3>{trainer.name}</h3>
-                    <section className="image-container">
-                      <img src={trainer.imageUrl} alt=""/>
+                    <section className="card-container">
+                      <h3>{trainer.name}</h3>
+                      <section className="skills-content">
+                        <ul>
+                        {trainer.skills.map(skill=> {
+                          return (
+                            <li>
+                              <p>{skill}</p>
+                            </li>  
+                          )
+                        })}
+                        </ul>
+                      </section>
+                      <section className="image-container">
+                        <img src={trainer.imageUrl} alt=""/>
+                      </section>
                     </section>
-                  </li> 
-                </Link> 
+                </li> 
+              </Link> 
               )
               }) : null}
           </ul>

@@ -1,0 +1,71 @@
+.search-container {
+  width: 100%;
+
+  .search-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    .title {
+      padding: 0 20px 0 20px;
+    }
+    .search-input {
+      padding: 0 20px 0 20px;
+    }
+    .results-container {
+      width: 90vw;
+      margin-top: 30px;
+
+      ul{
+        a{
+          text-decoration: none;
+          li{
+            list-style-type: none;
+            margin-bottom: 20px;
+            h3 {
+              font-size: 1.25rem;
+              margin-bottom: 10px;
+            }
+      
+            .skills-content {
+              ul {
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap
+              }
+              li {
+                margin:0 5px 8px 0;
+              } 
+              p {
+                text-decoration: none;
+                border: 1px solid #ffb688;
+                padding: 0 10px;
+                border-radius: 30px;
+                color: $detail-color;
+                font-size: 0.85rem;
+                background: linear-gradient(-185deg, #FFB764, #FF528E);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                }
+            }
+    
+            .image-container {
+              height: 50vh;
+              position: relative;
+
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 3px 3px 12px #ececec;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

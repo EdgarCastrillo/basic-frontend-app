@@ -392,8 +392,15 @@ label img {
       border-radius: 8px;
       box-shadow: 3px 3px 12px #ececec; }
 
-.search-container {
-  margin-top: 70px; }
+.search-inp {
+  width: 100%;
+  padding: 0px 10px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  margin-top: 12px;
+  border-radius: 20px;
+  font-family: SFProDisplayLight; }
 
 .explore-container {
   width: 100%; }
@@ -420,8 +427,8 @@ label img {
     .details-container .img-container .bookmark {
       position: absolute;
       object-fit: contain;
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 60px;
       bottom: 20px;
       right: 20px;
       box-shadow: none; }
@@ -544,6 +551,55 @@ label img {
         border-bottom: 1px solid #cacaca;
         margin-top: 12px;
         font-family: SFProDisplayLight; }
+
+.search-container {
+  width: 100%; }
+  .search-container .search-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px; }
+    .search-container .search-content .title {
+      padding: 0 20px 0 20px; }
+    .search-container .search-content .search-input {
+      padding: 0 20px 0 20px; }
+    .search-container .search-content .results-container {
+      width: 90vw;
+      margin-top: 30px; }
+      .search-container .search-content .results-container ul a {
+        text-decoration: none; }
+        .search-container .search-content .results-container ul a li {
+          list-style-type: none;
+          margin-bottom: 20px; }
+          .search-container .search-content .results-container ul a li h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px; }
+          .search-container .search-content .results-container ul a li .skills-content ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap; }
+          .search-container .search-content .results-container ul a li .skills-content li {
+            margin: 0 5px 8px 0; }
+          .search-container .search-content .results-container ul a li .skills-content p {
+            text-decoration: none;
+            border: 1px solid #ffb688;
+            padding: 0 10px;
+            border-radius: 30px;
+            color: #cacaca;
+            font-size: 0.85rem;
+            background: linear-gradient(-185deg, #FFB764, #FF528E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+          .search-container .search-content .results-container ul a li .image-container {
+            height: 50vh;
+            position: relative; }
+            .search-container .search-content .results-container ul a li .image-container img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+              box-shadow: 3px 3px 12px #ececec; }
 
 .main {
   width: 100vw; }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import withAuth from './withAuth.js';
 import {Link} from 'react-router-dom'
 import bookmarkService from '../services/bookmark-service'
-class Navbar extends Component {
+
+class Card extends Component {
 
   handleChange = () => {
   console.log(this.props.trainer._id)
@@ -43,4 +44,4 @@ class Navbar extends Component {
   }
 }
 
-export default withAuth(Navbar);
+export default withAuth(Card);

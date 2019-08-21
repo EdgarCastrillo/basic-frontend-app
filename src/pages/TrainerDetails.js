@@ -36,14 +36,7 @@ class Explore extends Component {
           </section>
           <section className="details-section">
             <h3>Academic degree</h3>
-            <ul>
-              <li>
-                <a href="/" alt="inef">Inef</a>
-              </li>
-              <li>
-                <a href="/" alt="inef">Master in Sports Performance</a>
-              </li>
-            </ul>
+            <p>{trainer.academic}</p>
           </section>
           <section className="details-section">
             <h3>Skills</h3>
@@ -59,14 +52,7 @@ class Explore extends Component {
           </section>
           <section className="details-section">
             <h3>Where do I train?</h3>
-            <ul>
-              <li>
-                <a href="/" alt="inef">Metropolitan Iradier</a>
-              </li>
-              <li>
-                <a href="/" alt="inef">Street training</a>
-              </li>
-            </ul>
+            {trainer.train}
           </section>
           <section className="book-now">
             <h3 className="book-now-title">Do you want to train with me?</h3>
