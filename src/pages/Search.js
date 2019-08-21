@@ -41,13 +41,15 @@ class Explore extends Component {
             <section className="title">
               <h2>Last trainers</h2> 
             </section>
-            {this.state.trainers.map(trainer=> {
-              return (
-                <>
-                  <Card trainer={trainer}/>
-                </>
-              )
-            })}
+            <section className="last-trainers">
+              {this.state.trainers.map(trainer=> {
+                return (
+                  <>
+                    <Card trainer={trainer}/>
+                  </>
+                )
+              })}
+            </section>
           </section>
         </section>
         <Navbar/>

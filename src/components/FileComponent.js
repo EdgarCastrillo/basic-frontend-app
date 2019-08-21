@@ -36,20 +36,22 @@ class FileUploadComponent extends Component {
     return (
       <div>
         <form>
-          <label>Image:</label>
           {isUploading && <p>Progress: {progress}</p>}
           {avatarURL && <img src={avatarURL} alt='name'/>}
-          <FileUploader
-            accept="image/*"
-            name="avatar"
-            randomizeFilename
-            multiple
-            storageRef={firebase.storage().ref("images")}
-            onUploadStart={this.handleUploadStart}
-            onUploadError={this.handleUploadError}
-            onUploadSuccess={this.handleUploadSuccess}
-            onProgress={this.handleProgress}
-          />
+          <label style={{backgroundColor: 'lightGrey', color: 'white', padding: 10, borderRadius: 40, pointer: 'cursor'}}>
+            <FileUploader
+              accept="image/*"
+              name="avatar"
+              className="btn-file-upload"
+              randomizeFilename
+              multiple
+              storageRef={firebase.storage().ref("images")}
+              onUploadStart={this.handleUploadStart}
+              onUploadError={this.handleUploadError}
+              onUploadSuccess={this.handleUploadSuccess}
+              onProgress={this.handleProgress}
+            />
+          </label>
         </form>
       </div>
     );

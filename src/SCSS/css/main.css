@@ -233,16 +233,10 @@ ul {
 .form-sign-up .header-form {
   margin-bottom: 40px; }
 
-.form-sign-up .img-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px; }
-  .form-sign-up .img-container .profile-img {
-    width: 90px;
-    height: 90px;
-    margin-right: 40px;
-    background-color: #dddddd;
-    border-radius: 100%; }
+.form-sign-up .img-upload {
+  margin-bottom: 30px; }
+  .form-sign-up .img-upload .img-title {
+    margin-bottom: 18px; }
 
 .form-sign-up .info-block {
   display: flex;
@@ -402,6 +396,20 @@ label img {
   border-radius: 20px;
   font-family: SFProDisplayLight; }
 
+.search-by-date .last-trainers {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%; }
+  .search-by-date .last-trainers .card-container {
+    margin-right: 20px; }
+    .search-by-date .last-trainers .card-container .image-container {
+      height: 48vh;
+      width: 85vw; }
+  .search-by-date .last-trainers .card-container:first-child {
+    padding-left: 20px; }
+  .search-by-date .last-trainers .card-container:last-child {
+    padding-right: 20px; }
+
 .explore-container {
   width: 100%; }
   .explore-container .explore-content {
@@ -559,7 +567,7 @@ label img {
     flex-direction: column;
     align-content: center;
     margin-top: 50px;
-    margin-bottom: 70px; }
+    margin-bottom: 50px; }
     .search-container .search-content .title {
       padding: 0 20px 0 20px; }
     .search-container .search-content .search-input {
@@ -600,6 +608,15 @@ label img {
               object-fit: cover;
               border-radius: 8px;
               box-shadow: 3px 3px 12px #ececec; }
+
+.add-bookmark-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 45%; }
+  .add-bookmark-text p {
+    font-size: 1.3rem;
+    margin-bottom: 15px; }
 
 .main {
   width: 100vw; }

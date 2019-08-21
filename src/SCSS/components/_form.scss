@@ -4,19 +4,27 @@
     margin-bottom: 40px;
   }
 
-  .img-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-
-    .profile-img {
-      width: 90px;
-      height: 90px;
-      margin-right: 40px;
-      background-color: #dddddd;
-      border-radius: 100%;
+  .img-upload {
+    margin-bottom: 30px;
+   
+    .img-title {
+      margin-bottom: 18px;
     }
   }
+
+  // .img-container {
+  //   display: flex;
+  //   align-items: center;
+  //   margin-bottom: 40px;
+
+  //   .profile-img {
+  //     width: 90px;
+  //     height: 90px;
+  //     margin-right: 40px;
+  //     background-color: #dddddd;
+  //     border-radius: 100%;
+  //   }
+  // }
   .info-block {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,22 @@
+.search-by-date {
+  .last-trainers {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+
+    .card-container {
+      margin-right: 20px;
+      
+      .image-container {
+        height: 48vh;
+        width: 85vw;
+      }
+    }
+    .card-container:first-child {
+      padding-left: 20px;
+    }
+    .card-container:last-child {
+      padding-right: 20px;
+    }
+  }
+}

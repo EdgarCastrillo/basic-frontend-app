@@ -18,7 +18,7 @@ getImage = (url) => {
 
   render() {
       return(
-        <section className="container-form">
+        <section className='container-form'>
           <div className='header-form'>
             <h2>Personal account</h2>
             <p>Lorem ipsum dolor sit amet, consectetur 
@@ -26,8 +26,10 @@ getImage = (url) => {
             pharetra non nec odio.</p>
           </div>
           <div className='img-upload'>
-            <h3>Profile picture</h3>
-            <p>add a profile picture</p>
+            <div className='img-title'>
+              <h3>Profile picture</h3>
+              <p>add a profile picture</p>
+            </div>
             <FileComponent getImage={this.getImage}/>
           </div>
           <FormUsers imageUrl={this.state.images} />
