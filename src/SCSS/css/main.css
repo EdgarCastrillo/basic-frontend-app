@@ -602,4 +602,5 @@ label img {
               box-shadow: 3px 3px 12px #ececec; }
 
 .main {
-  width: 100vw; }
+  width: 100vw;
+  height: 100vh; }
