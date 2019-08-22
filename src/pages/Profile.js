@@ -46,7 +46,7 @@ class Explore extends Component {
   }
 
   render() {
-    const {name, nameState, surname, surnameState, images, email, country, city, academic, description, descriptionState, skills, train, trainer} = this.state
+    const {name, nameState, surname, surnameState, email, country, city, academic, description, descriptionState, skills, train, trainer} = this.state
     console.log(email)
     return (
       <section className="profile-container">

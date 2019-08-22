@@ -12,12 +12,11 @@ class Instructions extends Component {
         </div>
         <div className='information'>
           <h2>What is fit?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit. Duis eget nibh sed sem tempus 
-          pharetra non nec odio. Maecenas ultrices 
-          venenatis ligula, at luctus magna accumsan id. 
-          Pellentesque et ipsum egestas, efficitur metus 
-          at, dapibus mi. </p>
+          <p>Fit is the app that allows to connect personal trainer and athlete, in a reliable, easy and fast way.
+          As a personal trainer, get new training by providing your academic training, experience and availability.
+          As an athlete, select the personal trainer that best suits your needs, tastes and availability.
+          You decide which side you are on.
+          </p>
           <Button route='/signup' color='btn-gradient' title='next'/>
         </div>
       </section>

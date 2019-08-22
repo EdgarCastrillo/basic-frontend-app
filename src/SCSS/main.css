@@ -68,12 +68,12 @@ a {
   box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px; }
   .btn-white h3 {
-    background: linear-gradient(-185deg, #FFB764, #FF528E);
+    background: linear-gradient(-185deg, #f58f09ff, #FF528E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
 .btn-gradient {
-  background-image: linear-gradient(-185deg, #FFB764, #FF528E);
+  background-image: linear-gradient(-185deg, #f58f09ff, #FF528E);
   color: #ffffff;
   width: 304px;
   height: 45px;
@@ -92,7 +92,7 @@ a {
   justify-content: center;
   font-family: SFProDisplaySemiBold;
   font-size: 1.1rem;
-  background-image: linear-gradient(-185deg, #FFB764, #FF528E);
+  background-image: linear-gradient(-185deg, #f58f09ff, #FF528E);
   color: #ffffff;
   width: 304px;
   height: 45px;
@@ -136,7 +136,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-185deg, #FFB764, #FF528E); }
+  background-image: linear-gradient(-185deg, #f58f09ff, #FF528E); }
   .splash h1 {
     color: #ffffff; }
 
@@ -146,7 +146,7 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(-185deg, #FFB764, #FF528E); }
+  background-image: linear-gradient(-185deg, #f58f09ff, #FF528E); }
   .login .logo {
     padding-top: 80px; }
     .login .logo h1 {
@@ -191,7 +191,7 @@ ul {
   flex-direction: column;
   padding: 20px; }
   .container-instructions .previous {
-    margin-bottom: 74px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center; }
     .container-instructions .previous img {
@@ -318,8 +318,8 @@ ul {
         font-size: 1.3rem;
         font-family: SFProCompactBold;
         color: #ffffff;
-        top: 33%;
-        left: 27%; }
+        top: 27%;
+        left: 20%; }
     .form-sign-up .info-block .skill-group img {
       width: 100px;
       border-radius: 15px; }
@@ -333,16 +333,16 @@ label img {
 .form-sign-up input#yoga {
   display: none; }
 
-.form-sign-up input#musculation {
+.form-sign-up input#fitness {
   display: none; }
 
 .form-sign-up input#cardio {
   display: none; }
 
-.form-sign-up input#stretching {
+.form-sign-up input#pilates {
   display: none; }
 
-.form-sign-up input#pilates {
+.form-sign-up input#boxing {
   display: none; }
 
 .container-nav {
@@ -450,7 +450,11 @@ input[type=text]:focus, textarea:focus {
   height: 100px;
   width: 100px;
   object-fit: cover;
-  border-radius: 300px; }
+  border-radius: 300px;
+  margin-bottom: 20px; }
+
+.btn-upload {
+  margin-top: 20px; }
 
 .explore-container {
   width: 100%; }
@@ -503,7 +507,7 @@ input[type=text]:focus, textarea:focus {
       bottom: 17px;
       left: 19px;
       box-shadow: none;
-      background: linear-gradient(-185deg, #FFB764, #FF528E);
+      background: linear-gradient(-185deg, #f58f09ff, #FF528E);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
     .details-container .img-container .trainer-city {

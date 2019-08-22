@@ -62,16 +62,12 @@ class Signup extends Component {
           <div className='info-container'>
             <div className='info'>
               <h2>Are you looking for a personal trainer?</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur 
-              adipiscing elit. Duis eget nibh sed sem tempus 
-              pharetra non nec odio.</p>
+              <p>If you want to find a personal trainer that suits what you're looking for, whatever the modality, sign up for Fit.</p>
               <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handlePersonal}/>
             </div>
             <div className='info'>
               <h2>Are you a personal trainer?</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur 
-              adipiscing elit. Duis eget nibh sed sem tempus 
-              pharetra non nec odio. </p>
+              <p>If you have academic training and experience and want to offer your training, you just have to register in Fit.</p>
               <Button route='/signup' color='btn-gradient' title='Sign up' handler={this.handleTrainer}/>
             </div>
           </div>

@@ -53,7 +53,6 @@ class FormTrainers extends Component{
               >
                 <option value="" disabled label="Select a country" />
                 <option value="Spain" label="Spain" />
-                <option value="France" label="France" />
               </Field>
               {touched.country && errors.country && <p className="form-error">{errors.country}</p>}
             </div>
@@ -80,6 +79,8 @@ class FormTrainers extends Component{
               >
               <option value="" disabled label="Select your academic degree" />
               <option value="Inef" label="Inef" />
+              <option value="Sports physiotherapy" label="Sports physiotherapy" />
+              <option value="Registered Yoga Teacher" label="Registered Yoga Teacher" />
               <option value="Master in Sport Performance" label="Master in Sport Performance" />
               </Field>
               {touched.academic && errors.academic && <p className="form-error">{errors.academic}</p>}
@@ -97,7 +98,7 @@ class FormTrainers extends Component{
               <label>Skills</label>
               <section className='skill-group'>
               <section className="skill-content">
-                <p className="skill-text">Yoga</p>
+                <p className="skill-text">Trx</p>
                 <Field
                   id='trx'
                   name="trx"
@@ -106,10 +107,46 @@ class FormTrainers extends Component{
                   className={"checkbox" + (errors.trx && touched.trx ? " is-invalid" : "")
                 }
                 />
-                <label className='skills' htmlFor='trx'><img src="/img/trx.jpg" alt=""/></label>
+                <label className='skills' htmlFor='trx'><img src="/img/skills/trx.jpg" alt=""/></label>
               </section>
               <section className="skill-content">
-                <p className="skill-text">Yoga</p>
+                <p className="skill-text">Boxing</p>
+                <Field
+                  id='boxing'
+                  name="boxing"
+                  type="checkbox"
+                  checked={values.boxing}
+                  className={"checkbox" + (errors.boxing && touched.boxing ? " is-invalid" : "")
+                }
+                />
+                <label className='skills' htmlFor='boxing'><img src="/img/skills/boxing.jpeg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Cardio</p>
+                <Field
+                  id='cardio'
+                  name="cardio"
+                  type="checkbox"
+                  checked={values.cardio}
+                  className={"checkbox" + (errors.cardio && touched.cardio ? " is-invalid" : "")
+                }
+                />
+                <label className='skills' htmlFor='stretching'><img src="/img/skills/cardio.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Fitness</p>
+                <Field
+                  id='fitness'
+                  name="fitness"
+                  type="checkbox"
+                  checked={values.fitness}
+                  className={"checkbox" + (errors.fitness && touched.fitness ? " is-invalid" : "")
+                }
+                />
+                <label className='skills' htmlFor='fitness'><img src="/img/skills/fitness.jpg" alt=""/></label>
+                </section>
+                <section className="skill-content">
+                <p className="skill-text">Pilates</p>
                 <Field
                   id='pilates'
                   name="pilates"
@@ -118,19 +155,7 @@ class FormTrainers extends Component{
                   className={"checkbox" + (errors.pilates && touched.pilates ? " is-invalid" : "")
                 }
                 />
-                <label className='skills' htmlFor='pilates'><img src="/img/trx.jpg" alt=""/></label>
-                </section>
-                <section className="skill-content">
-                <p className="skill-text">Yoga</p>
-                <Field
-                  id='stretching'
-                  name="stretching"
-                  type="checkbox"
-                  checked={values.stretching}
-                  className={"checkbox" + (errors.stretching && touched.stretching ? " is-invalid" : "")
-                }
-                />
-                <label className='skills' htmlFor='stretching'><img src="/img/trx.jpg" alt=""/></label>
+                <label className='skills' htmlFor='pilates'><img src="/img/skills/pilates.jpg" alt=""/></label>
                 </section>
                 <section className="skill-content">
                 <p className="skill-text">Yoga</p>
@@ -142,31 +167,7 @@ class FormTrainers extends Component{
                   className={"checkbox" + (errors.yoga && touched.yoga ? " is-invalid" : "")
                 }
                 />
-                <label className='skills' htmlFor='yoga'><img src="/img/trx.jpg" alt=""/></label>
-                </section>
-                <section className="skill-content">
-                <p className="skill-text">Yoga</p>
-                <Field
-                  id='musculation'
-                  name="musculation"
-                  type="checkbox"
-                  checked={values.musculation}
-                  className={"checkbox" + (errors.musculation && touched.musculation ? " is-invalid" : "")
-                }
-                />
-                <label className='skills' htmlFor='musculation'><img src="/img/trx.jpg" alt=""/></label>
-                </section>
-                <section className="skill-content">
-                <p className="skill-text">Yoga</p>
-                <Field
-                  id='cardio'
-                  name="cardio"
-                  type="checkbox"
-                  checked={values.cardio}
-                  className={"checkbox" + (errors.cardio && touched.cardio ? " is-invalid" : "")
-                }
-                />
-                <label className='skills' htmlFor='cardio'><img src="/img/trx.jpg" alt=""/></label>
+                <label className='skills' htmlFor='yoga'><img src="/img/skills/yoga.jpg" alt=""/></label>
                 </section>
               </section>
             </div>
@@ -178,6 +179,9 @@ class FormTrainers extends Component{
               >
               <option value="" disabled label="Select your gym" />
               <option value="Metropolitan" label="Metropolitan" />
+              <option value="Duet Fit" label="Duet Fit" />
+              <option value="Holmes Place" label="Holmes Place" />
+              <option value="Anytime Fitness" label="Anytime Fitness" />
               <option value="Dir" label="Dir" />
               </Field>
               {touched.train && errors.train && <p className="form-error">{errors.train}</p>}
@@ -221,7 +225,7 @@ export default withAuth(withFormik({
       .required(),
     country: Yup
       .string()
-      .oneOf(['Spain', 'France'])
+      .oneOf(['Spain'])
       .min(1)
       .required('Country is required'),
     city: Yup
@@ -231,7 +235,7 @@ export default withAuth(withFormik({
       .required('City is required'),
     academic: Yup
       .string()
-      .oneOf(['Inef', 'Master in Sport Performance'])
+      .oneOf(['Inef', 'Master in Sport Performance', 'Sports physiotherapy', 'Registered Yoga Teacher'])
       .min(1)
       .required('Academic degree is required'),
     description: Yup
@@ -240,7 +244,7 @@ export default withAuth(withFormik({
       .required('Description is required'),
     train: Yup
       .string()
-      .oneOf(['Metropolitan', 'Dir'])
+      .oneOf(['Metropolitan', 'Dir', 'Duet Fit', 'Holmes Place', 'Anytime Fitness'])
       .min(1)
       .required('Train is required'),
   }),

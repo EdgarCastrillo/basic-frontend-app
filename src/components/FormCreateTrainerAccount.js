@@ -21,9 +21,7 @@ getImage = (url) => {
         <section className="container-form">
           <div className='header-form'>
             <h2>Personal account</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit. Duis eget nibh sed sem tempus 
-            pharetra non nec odio.</p>
+            <p>Now, fill in the following fields to become known as a personal trainer. The more information about training and experience you provide, the more attractive you will make your profile.</p>
           </div>
           <div className='img-upload'>
             <h3>Profile picture</h3>
