@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "scss": "node-sass --watch ./src/SCSS -o ./src/SCSS",
+    "scss": "node-sass --watch ./src/SCSS -o ./src/SCSS/css",
     "deploy": "npm run build && firebase deploy"
   },
   "eslintConfig": {
