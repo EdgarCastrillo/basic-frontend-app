@@ -23,7 +23,7 @@ class Explore extends Component {
       console.log(error)
     })
   }
-
+  
   haveBookmarks = () => {
     this.state.trainers.forEach((trainer) => { 
       if(this.props.user.myBookmarks.includes(trainer._id)){
